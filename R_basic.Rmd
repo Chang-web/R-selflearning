@@ -1,0 +1,535 @@
+---
+title: "R_basic"
+author: "Chang"
+date: "2020/1/30"
+output: html_document
+---
+<h2 id = '0'></h2>
+* [Arithmetic](#1)
+
+* [Variables](#2) 
+
+* [Data Types](#3) 
+
+* [Missing value](#4) 
+
+* [Pipe](#5)
+
+* data sturcture
+
+  One dimension 
+  * [Vector](#6) 
+  * [Factor](#7)
+  
+  Two dimensions
+  * [Matrix](#8)
+  * [Data.frame](#9)
+  
+  N dimensions
+  * [Array](#10)
+  * [List](#11)
+
+<h2 id = '1'></h2>
+# Arithmetic
+```{r}
+#運算符號與數字間的空格非必要
+8 + 2 #加法
+8 - 2 #減法
+8 * 2 #乘法
+8 / 2 #除法
+8 %% 2 #取餘數
+2 * 3 + 4 #先乘除後加減
+2 * (3 + 4) #括弧內優先計算
+```
+<h2 id = '2'></h2>
+# Variables
+
+**變數指派**
+```{r}
+x <- 2 #變數名稱開頭不能為數字或底線
+x
+2 -> x #箭頭可指向另一個方向
+x
+y = 3 #亦可使用等號指派
+y
+a <- b <- 4 #連續指派
+a
+b
+assign("c", 5)
+c
+```
+**移除變數**
+```{r}
+assign("c", 5)
+c
+rm(c)
+c
+```
+<h2 id = '3'></h2>
+# Data Types
+
+**數值資料**
+```{r}
+is.numeric(x) #檢測變數是否為numeric
+d <- 1L #指派整數需附加L
+d
+is.integer(d) #檢測變數是否為interger
+is.numeric(d) 
+
+class(2L) #用class函數檢測資料型別
+class(2.6)
+class(2L * 2.6)
+class(5L / 2L)
+```
+**字元(字串)資料**
+```{r}
+x <- factor("r studio") #用factor函數會出現Levels的訊息
+x
+y <- class("r studio") 
+y
+nchar(y) #用nchar函數找出character的長度
+nchar("r studio")
+nchar("2019")
+```
+**日期**
+```{r}
+date1 <- as.Date("2019-7-13") #Date儲存日期
+date1
+class(date1)
+as.numeric(date1) #自1970年1月1日算起的天數
+
+date2 <- as.POSIXct("2019-7-13 08:10") #用POSIXct儲存日期和時間
+date2
+class(date2)
+as.numeric(date2) #自1970年1月1日算起的秒數
+class(as.numeric(date2)) #轉換資料型別
+```
+**邏輯資料**
+```{r}
+TRUE * 6 #數值表示TRUE=1，1*6=6
+FALSE * 6 #數值表示FALSE=0，0*6=0
+
+q <- TRUE
+class(q)
+is.logical(q) #檢測變數是否為logical
+
+2 == 3 # 2 是否等於 3 ?
+2 != 3 # 2 是否不等於 3 ?
+```
+<h2 id = '4'></h2>
+# Missing value
+
+**NA**
+```{r}
+k <- c(1,2,NA,4,NA,5) #NA會被vector視作一個元素
+k
+is.na(k) #檢測是否為遺失值
+mean(k) #元素有NA無法計算
+mean(k, na.rm=TRUE) #用na.rm=TRUE排除遺失值再計算
+```
+**NULL**
+```{r}
+s <- c(1,2,NULL,4,NULL,5) #NULL是虛無的，不能成為vector的一部分
+s
+```
+<h2 id = '5'></h2>
+# Pipe
+
+magrittr套件中的pipe運算子會將左邊的值或物件移植到其右邊函數的第一個引數
+```{r}
+library(magrittr)
+x <- 1:10
+x %>% mean #用pipe將X移植到mean函數(pipe讀取方式由左到右)
+
+y <- c(1,2,NA,3,NA,4,5)
+sum(is.na(y)) #嵌入函數方法
+y %>% is.na %>% sum #用pipe串聯函數，函數不須額外引數則不必括號
+y %>% mean(na.rm=TRUE) #額外引數需括號
+```
+* [back](#0)
+
+<h2 id = '6'></h2>
+# Vector
+
+**向量運算**
+```{r}
+x <- c(1,2,3,4,5) #"c" means "combine"
+x
+x + 2 #每個元素加2
+x - 2 #每個元素減2
+x * 2 #每個元素乘2
+x / 2 #每個元素除2
+x ^ 2 #每個元素平方
+sqrt(x) #每個元素開平方
+y <- c(6,7,8,9,10)
+y
+z <- x + y #兩(相同長度)向量可相加 [減乘除亦同]
+total <- sum(z) #sum向量加總
+total
+mean <- mean(z) #mean向量平均
+mean
+
+x <- 1:10 # ":"可生成任意連續數字
+x
+length(x) #查看向量長度
+```
+**對不相等向量運算**
+```{r}
+x <- c(1,2,3,4) 
+x + c(1,2) #兩向量有倍數關係才可運算
+x + c(1,2,3)
+```
+**any,all函數**
+```{r}
+x <- 10:1
+y <- -4:5
+nchar(y) #每個元素的長度
+any(x < y) #查看至少一個比較結果是否成立
+all(x < y) #查看所有比較結果是否成立
+```
+**查看向量元素**
+
+數值或由文字組成的向量都適用。
+```{r}
+x <- c(1,2,3,4,5)
+x[1] #查看第一個元素
+x[1:3] #查看連續元素
+x[c(1,3)] #查看非連續元素
+
+four_seasons <- c("spring", "summer", "autumn", "winter")
+favorite_season <- four_seasons[3]
+favorite_season
+```
+**刪除向量中的變數**
+```{r}
+x <- c(1,2,3,4,5)
+x[c(-1:-3)] #刪除第一到第三個變數
+x[c(-1,-3)] #刪除第一和第三個變數
+
+four_seasons <- c("spring", "summer", "autumn", "winter")
+favorite_seasons <- four_seasons[c(-2, -4)]
+favorite_seasons
+```
+**向量命名**
+```{r}
+c(one = "a", two = "b", three = "c") 
+
+e <- 1:3
+names(e) <- c("a","b","c") #names為命名元素
+e
+```
+**向量的屬性**
+
+向量只能包含一種變數型別。
+```{r}
+#將整數跟數值放入同一個向量中，向量會將整數轉換成數值
+k <- c(7L, 24) 
+k
+class(k[1])
+
+#將邏輯值跟整數放入同一個向量中，向量會將邏輯值轉換成整數
+k<- c(7L, FALSE)
+k
+class(k[2])
+
+#將邏輯值、整數、數值、文字放入同一個向量中，向量會全部轉換成文字
+mix <- c(FALSE, 7L, 24, "spring")
+mix
+class(mix[1])
+class(mix[2])
+class(mix[3])
+```
+**用判斷運算子篩選向量**
+```{r}
+four_seasons <- c("spring", "summer", "autumn", "winter")
+my_favorite_seasons <- four_seasons == "autumn"
+four_seasons[my_favorite_seasons]
+
+# |（OR）
+my_favorite_seasons <- four_seasons == "spring" | four_seasons == "autumn"
+four_seasons[my_favorite_seasons]
+
+# &（AND）
+my_favorite_seasons <- four_seasons == "spring" & four_seasons != "autumn"
+four_seasons[my_favorite_seasons]
+```
+**向量的產生方式**
+```{r}
+#使用c()函數建立
+c(1,2,3,4,5) 
+
+#rep()函數生成重複變數的向量，times指定生成個數 
+rep("R", times = 10) 
+
+#seq()函數生成等差數列，from指定數列起始值，to指定數列終止值，by指定數值間距
+seq(from = 7, to = 77, by = 7)
+
+seq(from = 11 ,to = 20, by = 1) 
+
+11:20 #生成數值間距為1的數列，也可用":"
+```
+
+<h2 id = '7'></h2>
+# Factor 
+
+**因素向量**
+
+因素向量（factor）是一個帶有層級（Levels）資訊的向量，可用來儲存類別型變數。使用 factor() 函數可以將向量轉換成因素向量。
+```{r}
+#類別間無法比較的名目型變數，例:國家
+countries_vector <- c("Taiwan","Japan","America","China","England" )
+factor_countries_vector <- factor(countries_vector) 
+factor_countries_vector
+
+#類別間可以比較的順序型變數，例:教育程度
+education_level_vector <- c("high school","college","masters","doctorate")
+factor_education_level <- factor(education_level_vector,levels = c("high school","college","masters","doctorate"),order=TRUE)
+factor_education_level
+```
+**選取比較**
+```{r}
+grade_vector <- c("A","B","F","C","A","D","B")
+#使用factor()建立順序類別 
+factor_grade_vector <- factor(grade_vector,ordered =TRUE, 
+                              levels =c("F","D","C","B","A"))                           
+#選出資料，例:兩位學生
+student2 <- factor_grade_vector[2]
+student6 <- factor_grade_vector[6]
+#學生2的成績是否比學生6好?
+student2 > student6
+```
+**查看函數說明文件**
+```{r}
+?'==' #用?''查看==的操作說明
+apropos("mea") #用apropos查看相關函數
+```
+* [back](#0)
+
+<h2 id = '8'></h2>
+# Matrix
+
+**建立(列X行)矩陣 ** :先列 (Row) 後行 (Column)
+```{r}
+#建立2x3矩陣，nrow為列數，ncol為行數，byrow可以指定要用什麼順序擺放原先在向量中的元素
+a <- matrix(1:6, nrow = 2, byrow = TRUE)
+a
+class(a)
+#byrow的預設值為FALSE，如果沒有特別指定，就是以垂直方向擺放矩陣
+b <- matrix(1:6, nrow = 2) 
+b
+```
+**選取元素**
+```{r}
+b <- matrix(1:6, nrow = 2) 
+b[1,2] #選取位於第一列第二行的元素
+b[,2] #選取所有第二行的元素
+b[1,] #選取所有第一列的元素
+```
+**用判斷運算子篩選矩陣**
+```{r}
+# & (AND)
+b <- matrix(1:6, nrow = 2)
+select1 <- b < 5 & b > 2
+b[select1]
+
+# | (OR)
+select2 <- b < 2 | b > 5 
+b[select2]
+```
+**矩陣的屬性**
+
+矩陣裡的每一個元素，都必須是同樣的資料型別
+```{r}
+#如果將數值與邏輯值一同放入矩陣，則邏輯值亦會被自動轉換成數值
+d <- matrix(c(1, 2, TRUE, FALSE, 3, 4), nrow = 2)
+d
+class(d[, 2]) 
+```
+**矩陣的建立與命名**
+```{r}
+#學生成績
+exam1 <- c(90, 70)
+exam2 <- c(80, 75)
+exam3 <- c(85, 95)
+students_grades <- c(exam1,exam2, exam3) #宣告students_grades
+#建立semester_grades_matrix
+semester_grades_matrix <- matrix(students_grades, byrow = T, nrow = 3) 
+semester_grades_matrix 
+
+#用來命名的向量students和exams
+students <- c("stu1","stu2")
+exams <- c("exam1","exam2", "exam3")
+#colnames()是欄命名函數
+colnames(semester_grades_matrix ) <- students
+#rownames()是列命名函數
+rownames(semester_grades_matrix ) <- exams
+semester_grades_matrix 
+```
+**矩陣運算**
+```{r}
+#使用t()-transpose或aperm()函數轉置矩陣
+semester_grades_matrix_t <- t(semester_grades_matrix)
+semester_grades_matrix_t
+
+semester_grades_matrix_t1 <- aperm(semester_grades_matrix)
+semester_grades_matrix_t1
+
+#rowSums():列總和;colSums():欄總和
+average <- rowSums(semester_grades_matrix_t)/3
+#rbind():列合併；cbind():欄合併
+all_grades_matrix <- cbind(semester_grades_matrix_t,average)
+all_grades_matrix
+```
+```{r}
+f <- matrix(1:10,nrow=5)
+g <- matrix(11:20,nrow=5)
+f
+g
+
+f + g #矩陣每個對應元素相加
+f - g #矩陣每個對應元素相減
+f == g #矩陣每個對應元素是否一樣
+f * g #矩陣每個對應元素相乘(不等於矩陣相乘)
+
+#f[5X2],g[5X2]矩陣相乘--前列乘後行，其中一個須先轉置
+f %*% t(g) #f[5X2]和t(g)[2x5]矩陣相乘，形成5x5矩陣
+```
+
+<h2 id = '9'></h2>
+# Data.frame
+
+**建立資料框**
+```{r}
+#data.frame中，每一行都是由相同長度的vector所組成
+x <- c("Lisa","Amy","Jack","Tweety","Gale","Ruby",
+        "James","Ben","Angel","Cindy")
+y <- 99:90
+z <- 1:10
+#用data.frame()函數建立10x3資料框，並在宣告過程直接命名
+DF <- data.frame(student=x,score=y,minus=z)
+DF
+```
+**data.frame中，每一列(row)代表一個觀測值，每一行(column)代表一個變數，且資料框預設會將文字的內容以因素向量儲存**
+```{r}
+DF[1,] #選出第一個觀測值
+DF[,1] #選出第一個變數
+
+#將文字內容從因素向量修正為文字
+DF <- data.frame(student=x,score=y,minus=z,stringsAsFactors = FALSE)
+DF[,1] #在 data.frame() 函數指定 stringsAsFactors = FALSE
+
+DF[,1] <- as.character(DF[,1])
+DF[,1] #用 as.character() 函數進行變數類型的轉換
+```
+**查看資料框屬性**
+```{r}
+class(DF) #用class()函數查看data.frame的資料型別
+nrow(DF) #查看列數
+ncol(DF) #查看行數
+dim(DF) #dim()函數列出維度資訊，可同時查看行數和列數
+head(DF) #查看前六列
+tail(DF,n=3) #查看後三列
+str (DF) #用str()函數快速了解結構
+names(DF) #用names()函數查看直行名稱
+rownames(DF) #用rownames()函數查看橫列名稱
+```
+**查看資料內容**
+```{r}
+DF$student #使用 $ 透過指定名稱查看某行內容
+
+#使用 [] 查看資料內容
+#查看特定或行元素(行列名稱不被顯示)
+DF[3,2] 
+DF[c(3,7),1]
+#指定多於一行或列元素(顯示行列名稱)
+DF[3,1:2] 
+DF[2,c(1,2)]
+DF[2,c("student","score")]
+DF[c(3,7),1:3]
+```
+
+```{r}
+#資料型別因不同方法產生不同結果
+DF[,"student"]
+class(DF[,"student"])
+
+DF["student"]
+class(DF["student"])
+
+DF[["student"]]
+class(DF[["student"]])
+#若使用中括號且要保證所回傳的是單一行的data.frame，可加入drop=FALSE引數
+DF[,"student",drop=FALSE]
+class(DF[,"student",drop=FALSE])
+```
+**篩選資料**
+```{r}
+#使用filter函數設定篩選條件
+filter <- DF$score == 96
+DF[filter,] #篩選水平觀測值
+
+#使用subset函數設定篩選條件
+subset(DF,subset = score > 96)
+```
+**查看資料框表示方式**
+```{r}
+#使用model.matrix來建立指標或虛擬變數(dummy variable)，產生數個直行，每行代表factor的一個level，若某列存有該level，則顯示為1，否則為0。
+capital_city <- factor(c("Tokyo","Taipei","London","Washington","Taipei",
+                    "Souel","Rome","Paris","Warsaw","Taipei"))
+model.matrix(~capital_city -1) # 轉換出只有虛擬變數的欄位
+```
+* [back](#0)
+
+<h2 id = '10'></h2>
+# Array
+
+**一維度的陣列是向量，二維度dim=c(x,y)的陣列是矩陣，array(陣列)是多維度的vector，其元素必須為同一種資料形式。**
+```{r}
+#將向量放入陣列
+vector1 <- c(1,2,3)
+vector2 <- c(7,8,9)
+array1 <- array(c(vector1,vector2),dim = c(2,3,2))
+array1
+
+#將數列放入陣列
+array2 <- array(1:12,dim = c(2,3,2))
+array2
+
+array2[1,,]
+array2[1,,1]
+array2[,,1]
+```
+
+<h2 id = '11'></h2>
+# List
+
+**list(列表，清單)可以儲存任何型別或長度的資料**
+```{r}
+#建立包含多樣性物件的矩陣
+thevector <- 1:10
+thelist <- list(c(1,2,3),4:8) #包含兩個元素的list
+thematrix <- matrix(1:9,nrow = 3)
+thedf <- DF[1:5,]
+thelist <- list(vec = thevector,mat = thematrix,list = thelist,df = thedf)
+thelist
+```
+**從列表中選擇資料**
+```{r}
+names(thelist)
+thelist[["mat"]] #運用[[]]選出清單中的特定資料
+
+#用[[]]選出特定資料後，再用[]選出該資料指定的內容
+thelist[["df"]][,1] 
+thelist[["df"]]$student
+thelist[["df"]][,1,drop = FALSE]
+thelist[["list"]][2]
+```
+**附加元素**
+```{r}
+length(thelist) #查看列表長度
+thelist[[5]] <- 2020 #附加第五個元素，不給予名稱
+thelist[["newelement"]] <- 11:20 #附加第六個元素，給予名稱
+names(thelist)
+length(thelist)
+```
+* [back](#0)
