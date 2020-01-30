@@ -1,12 +1,9 @@
 # R
 
-## Introduction
-
- * learning R
  
 ## Progress
 
- * R basic
+ * [R basic](https://github.com/Chang-web/R/tree/master/R%20basic)
  * R intermediate
  * reading data
  * data manipulation
