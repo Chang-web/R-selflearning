@@ -377,7 +377,9 @@ semester_grades_matrix_t1 <- aperm(semester_grades_matrix)
 semester_grades_matrix_t1
 
 #rowSums():列總和;colSums():欄總和
-average <- rowSums(semester_grades_matrix_t)/3
+average <- rowSums(semester_grades_matrix_t)/3 
+#或可由apply(semester_grades_matrix_t, 1, mean)計算平均，詳見R_intermediate
+
 #rbind():列合併；cbind():欄合併
 all_grades_matrix <- cbind(semester_grades_matrix_t,average)
 all_grades_matrix

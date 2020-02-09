@@ -810,7 +810,9 @@ semester_grades_matrix_t1</code></pre>
 ## stu1    90    80    85
 ## stu2    70    75    95</code></pre>
 <pre class="r"><code>#rowSums():列總和;colSums():欄總和
-average &lt;- rowSums(semester_grades_matrix_t)/3
+average &lt;- rowSums(semester_grades_matrix_t)/3 
+#或可由apply(semester_grades_matrix_t, 1, mean)計算平均，詳見R_intermediate
+
 #rbind():列合併；cbind():欄合併
 all_grades_matrix &lt;- cbind(semester_grades_matrix_t,average)
 all_grades_matrix</code></pre>
