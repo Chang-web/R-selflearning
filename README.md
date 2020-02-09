@@ -4,7 +4,7 @@
 ## Progress
 
  * [R basic](https://github.com/Chang-web/R/tree/master/R%20basic)
- * R intermediate(https://github.com/Chang-web/R/tree/master/R%20intermediate
+ * [R intermediate](https://github.com/Chang-web/R/tree/master/R%20intermediate)
  * reading data
  * plyr & dplyr
  * data manipulation
