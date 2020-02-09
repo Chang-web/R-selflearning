@@ -92,6 +92,8 @@ nchar("r studio")
 nchar("2019")
 ```
 **日期**
+
+see more details in R documentation of Date-time Conversion Functions to and from Character
 ```{r}
 date1 <- as.Date("2019-7-13") #Date儲存日期
 date1
@@ -104,6 +106,7 @@ class(date2)
 as.numeric(date2) #自1970年1月1日算起的秒數
 class(as.numeric(date2)) #轉換資料型別
 ```
+
 **邏輯資料**
 ```{r}
 TRUE * 6 #數值表示TRUE=1，1*6=6
@@ -146,7 +149,7 @@ sum(is.na(y)) #嵌入函數方法
 y %>% is.na %>% sum #用pipe串聯函數，函數不須額外引數則不必括號
 y %>% mean(na.rm=TRUE) #額外引數需括號
 ```
-* [back](#0)
+*[back](#0)*
 
 <h2 id = '6'></h2>
 # Vector
@@ -303,7 +306,6 @@ student2 > student6
 ?'==' #用?''查看==的操作說明
 apropos("mea") #用apropos查看相關函數
 ```
-* [back](#0)
 
 <h2 id = '8'></h2>
 # Matrix
@@ -395,6 +397,8 @@ f * g #矩陣每個對應元素相乘(不等於矩陣相乘)
 f %*% t(g) #f[5X2]和t(g)[2x5]矩陣相乘，形成5x5矩陣
 ```
 
+*[back](#0)*
+
 <h2 id = '9'></h2>
 # Data.frame
 
@@ -431,8 +435,12 @@ head(DF) #查看前六列
 tail(DF,n=3) #查看後三列
 str (DF) #用str()函數快速了解結構
 names(DF) #用names()函數查看直行名稱
+attributes(DF) #用attribute()查看直行和橫列名稱
 rownames(DF) #用rownames()函數查看橫列名稱
+summary(DF) #顯示資料的基本資訊
+View(DF) #直接開啟資料畫面
 ```
+
 **查看資料內容**
 ```{r}
 DF$student #使用 $ 透過指定名稱查看某行內容
@@ -478,7 +486,6 @@ capital_city <- factor(c("Tokyo","Taipei","London","Washington","Taipei",
                     "Souel","Rome","Paris","Warsaw","Taipei"))
 model.matrix(~capital_city -1) # 轉換出只有虛擬變數的欄位
 ```
-* [back](#0)
 
 <h2 id = '10'></h2>
 # Array
@@ -532,4 +539,4 @@ thelist[["newelement"]] <- 11:20 #附加第六個元素，給予名稱
 names(thelist)
 length(thelist)
 ```
-* [back](#0)
+*[back](#0)*

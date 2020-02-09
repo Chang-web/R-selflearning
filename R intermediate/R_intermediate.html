@@ -13,7 +13,7 @@
 <meta name="author" content="Chang" />
 
 
-<title>R_basic</title>
+<title>R_intermediate</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -363,9 +363,9 @@ summary {
 
 
 
-<h1 class="title toc-ignore">R_basic</h1>
+<h1 class="title toc-ignore">R_intermediate</h1>
 <h4 class="author">Chang</h4>
-<h4 class="date">2020/1/30</h4>
+<h4 class="date">2020/2/8</h4>
 
 </div>
 
@@ -373,829 +373,1145 @@ summary {
 <h2 id="0">
 </h2>
 <ul>
-<li><p><a href="#1">Arithmetic</a></p></li>
-<li><p><a href="#2">Variables</a></p></li>
-<li><p><a href="#3">Data Types</a></p></li>
-<li><p><a href="#4">Missing value</a></p></li>
-<li><p><a href="#5">Pipe</a></p></li>
-<li><p>data sturcture</p>
-<p>One dimension</p>
-<ul>
-<li><a href="#6">Vector</a></li>
-<li><a href="#7">Factor</a></li>
-</ul>
-<p>Two dimensions</p>
-<ul>
-<li><a href="#8">Matrix</a></li>
-<li><a href="#9">Data.frame</a></li>
-</ul>
-<p>N dimensions</p>
-<ul>
-<li><a href="#10">Array</a></li>
-<li><a href="#11">List</a></li>
-</ul></li>
+<li><p><a href="#1">Function</a></p></li>
+<li><p><a href="#2">Control flow</a></p></li>
+<li><p><a href="#3">Loops</a></p></li>
+<li><p><a href="#4">Apply functions</a></p></li>
+<li><p><a href="#5">Functions Related To apply()</a></p></li>
 </ul>
 <h2 id="1">
 </h2>
-<div id="arithmetic" class="section level1">
-<h1>Arithmetic</h1>
-<pre class="r"><code>#運算符號與數字間的空格非必要
-8 + 2 #加法</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code>8 - 2 #減法</code></pre>
-<pre><code>## [1] 6</code></pre>
-<pre class="r"><code>8 * 2 #乘法</code></pre>
-<pre><code>## [1] 16</code></pre>
-<pre class="r"><code>8 / 2 #除法</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>8 %% 2 #取餘數</code></pre>
-<pre><code>## [1] 0</code></pre>
-<pre class="r"><code>2 * 3 + 4 #先乘除後加減</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code>2 * (3 + 4) #括弧內優先計算</code></pre>
-<pre><code>## [1] 14</code></pre>
+<div id="function" class="section level1">
+<h1>Function</h1>
+<p><strong>定義函數</strong></p>
+<pre class="r"><code>say.hello &lt;- function(){
+    print(&quot;Hello, World&quot;)
+}
+say.hello() #使用say.hello呼叫此函數</code></pre>
+<pre><code>## [1] &quot;Hello, World&quot;</code></pre>
+<p><strong>函數的引數:引數可被輸入在函數後面的括號中</strong></p>
+<p>sprintf函數的首個引數為字串和特殊輸入字元，後面的引數會取代該特殊輸入字元。</p>
+<pre class="r"><code>sprintf(&quot;Hello %s&quot;, &quot;David&quot;) #取代一個特殊輸入字元</code></pre>
+<pre><code>## [1] &quot;Hello David&quot;</code></pre>
+<pre class="r"><code>sprintf(&quot;Hello %s, today is a %s day&quot;, &quot;David&quot;, &quot;sunny&quot;) #取代兩個特殊輸入字元</code></pre>
+<pre><code>## [1] &quot;Hello David, today is a sunny day&quot;</code></pre>
+<pre class="r"><code>#用sprintf建立字串，name引數在function()內為變數
+hello.person &lt;- function(name){         
+    print(sprintf(&quot;Hello %s&quot;,name))  #一個引數
+}
+hello.person(&quot;David&quot;)</code></pre>
+<pre><code>## [1] &quot;Hello David&quot;</code></pre>
+<pre class="r"><code>#呼叫多個引數或指定其相對位置
+hello.person &lt;- function(first, last){
+    print(sprintf(&quot;Hello %s %s&quot;,first,last))
+}
+hello.person(&quot;David&quot;,&quot;Chang&quot;)</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>hello.person(last = &quot;Chang&quot;,&quot;David&quot;) #先指定末項引數</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>hello.person(f=&quot;David&quot;,l=&quot;Chang&quot;) #指輸入部分引數名稱來指定，須小心使用</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>#預設引數值
+hello.person &lt;- function(first, last=&quot;Chang&quot;){     #預設姓氏
+    print(sprintf(&quot;Hello %s %s&quot;,first,last))
+}
+hello.person(&quot;David&quot;)</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>hello.person(&quot;David&quot;,&quot;Yang&quot;) #呼叫時指定其他姓氏</code></pre>
+<pre><code>## [1] &quot;Hello David Yang&quot;</code></pre>
+<pre class="r"><code>#用&quot;...&quot;來附加引數，R允許輸入任意數量的引數到函數中
+hello.person &lt;- function(first, last,...){
+    print(sprintf(&quot;Hello %s %s&quot;,first,last))
+}
+hello.person(&quot;David&quot;,&quot;Chang&quot;,extra=&quot;Good morning&quot;) #附加一個引數</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>hello.person(&quot;David&quot;,&quot;Chang&quot;,&quot;Good&quot;,&quot;morning&quot;) #附加兩個引數</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<p><strong>值的回傳</strong></p>
+<pre class="r"><code>#將計算好的結果回傳給函數
+mod &lt;- function(x){
+  print(x%%5)
+  print(&quot;Hello!&quot;)
+}
+mod(18)</code></pre>
+<pre><code>## [1] 3
+## [1] &quot;Hello!&quot;</code></pre>
+<pre class="r"><code>#使用return()將計算好的結果回傳給函數，同時作為該函數的結束
+mod &lt;- function(x){
+  return(x%%5)
+  print(&quot;Hello&quot;) #mod()函數已退出，指令不被執行
+}
+mod(18)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p><strong>Do.call</strong></p>
+<p>do.call()的引數需要以list的方式呈現。</p>
+<pre class="r"><code>#可用character或物件指定函數名稱
+do.call(&quot;hello.person&quot;,list(&quot;David&quot;,&quot;Chang&quot;))</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>do.call(hello.person,list(&quot;David&quot;,&quot;Chang&quot;))</code></pre>
+<pre><code>## [1] &quot;Hello David Chang&quot;</code></pre>
+<pre class="r"><code>evaluation &lt;- function(x,func){
+  do.call(func,list(x))
+}
+evaluation(1:10,mean) #計算平均值</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<pre class="r"><code>evaluation(1:10,sd) #計算標準差</code></pre>
+<pre><code>## [1] 3.02765</code></pre>
 <h2 id="2">
 </h2>
 </div>
-<div id="variables" class="section level1">
-<h1>Variables</h1>
-<p><strong>變數指派</strong></p>
-<pre class="r"><code>x &lt;- 2 #變數名稱開頭不能為數字或底線
-x</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>2 -&gt; x #箭頭可指向另一個方向
-x</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>y = 3 #亦可使用等號指派
-y</code></pre>
-<pre><code>## [1] 3</code></pre>
-<pre class="r"><code>a &lt;- b &lt;- 4 #連續指派
-a</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>b</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>assign(&quot;c&quot;, 5)
-c</code></pre>
-<pre><code>## [1] 5</code></pre>
-<p><strong>移除變數</strong></p>
-<pre class="r"><code>assign(&quot;c&quot;, 5)
-c</code></pre>
-<pre><code>## [1] 5</code></pre>
-<pre class="r"><code>rm(c)
-c</code></pre>
-<pre><code>## function (...)  .Primitive(&quot;c&quot;)</code></pre>
+<div id="control-flow" class="section level1">
+<h1>Control flow</h1>
+<p><strong>邏輯判斷式</strong></p>
+<pre class="r"><code>1 == 1</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>1 &lt;= 1 #大於等於</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>1 != 1 #不等於</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>!c(T,F) #!表示否定</code></pre>
+<pre><code>## [1] FALSE  TRUE</code></pre>
+<pre class="r"><code>c(T,T,F) &amp; c(F,T,F)</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
+<pre class="r"><code>c(T,T,F) &amp;&amp; c(F,T,F) #只回傳第一組比較值</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>c(T,T,F) | c(F,T,F)</code></pre>
+<pre><code>## [1]  TRUE  TRUE FALSE</code></pre>
+<pre class="r"><code>c(T,T,F) || c(F,T,F) #只回傳第一組比較值</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>5 %in% c(1:10) # x %in% y :x是否在y中</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><strong>if(首條件), else if, else(末條件)</strong></p>
+<ul>
+<li>兩個條件</li>
+</ul>
+<pre class="r"><code>num &lt;- function(x){
+  if(x &gt; 20){
+    print(&quot;large&quot;)
+  }else
+  {
+    print(&quot;small&quot;)
+  }
+}
+num(10)</code></pre>
+<pre><code>## [1] &quot;small&quot;</code></pre>
+<pre class="r"><code>num(25)</code></pre>
+<pre><code>## [1] &quot;large&quot;</code></pre>
+<ul>
+<li>三個條件</li>
+</ul>
+<pre class="r"><code>num &lt;- function(x){
+  if(x &gt; 20){
+    print(&quot;large&quot;)
+  }else if(x &lt; 10)
+  {
+    print(&quot;small&quot;)
+  }
+  else{
+    print(&quot;medium&quot;)
+  }
+}
+num(15)</code></pre>
+<pre><code>## [1] &quot;medium&quot;</code></pre>
+<pre class="r"><code>num(5)</code></pre>
+<pre><code>## [1] &quot;small&quot;</code></pre>
+<pre class="r"><code>num(30)</code></pre>
+<pre><code>## [1] &quot;large&quot;</code></pre>
+<ul>
+<li>三個以上條件</li>
+</ul>
+<pre class="r"><code>score &lt;- function(x){
+  if(x &lt;= 100){
+    if(x &lt; 0){
+      print(&quot;confused&quot;)
+    }else if(x &gt;= 60){
+      print(&quot;pass&quot;)
+    }else{
+      print(&quot;fail&quot;)
+    }
+  }else{
+    print(&quot;impossible&quot;)
+  }
+}
+score(70)</code></pre>
+<pre><code>## [1] &quot;pass&quot;</code></pre>
+<pre class="r"><code>time_interval &lt;- c(&quot;early morning&quot;,&quot;morning&quot;,&quot;noon&quot;,
+                   &quot;evening&quot;,&quot;night&quot;,&quot;midnight&quot;) 
+routine &lt;- function(time_interval){
+  if(time_interval == &quot;morning&quot;){
+    print(&quot;school&quot;)
+  }else if(time_interval == &quot;noon&quot;){
+    print(&quot;lunch and nap&quot;)
+  }else if(time_interval == &quot;evening&quot;){
+    print(&quot;dinner&quot;)
+  }else if(time_interval == &quot;night&quot;){
+    print(&quot;do homework&quot;)
+  }else{
+    print(&quot;sleep&quot;)
+  }
+}
+routine(&quot;midnight&quot;)</code></pre>
+<pre><code>## [1] &quot;sleep&quot;</code></pre>
+<p><strong>switch</strong></p>
+<p>switch可以簡化使用if, else if,else的繁瑣步驟，其括弧中第一個引數為檢測值， 接下來的引數為條件和所對應的結果，最後的引數只有結果，是為預設結果。</p>
+<pre class="r"><code>routine &lt;- function(time_interval){
+  switch(time_interval,
+         &quot;morning&quot; = &quot;school&quot;,
+         &quot;noon&quot; = &quot;lunch and nap&quot;,
+         &quot;evening&quot; = &quot;dinner&quot;,
+         &quot;night&quot; = &quot;do homework&quot;,
+         &quot;sleep&quot;)
+}
+routine(&quot;midnight&quot;)</code></pre>
+<pre><code>## [1] &quot;sleep&quot;</code></pre>
+<pre class="r"><code>#給函數的引數為數值x，之前設定的引數名稱會被忽略，只會輸出第x個引數的結果
+routine(2)</code></pre>
+<pre><code>## [1] &quot;lunch and nap&quot;</code></pre>
+<pre class="r"><code>routine(6) #若數值比引數總數大，會回傳虛無值NULL
+is.null(routine(6))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><strong>ifelse</strong></p>
+<p>ifelse用法和excel中的if函數用法類似，第一個引數為檢測條件，第二個引數是當檢測結果為TURE要回傳的值，第三個引數是當檢測結果為FALSE要回傳的值。</p>
+<ul>
+<li>單一條件檢測</li>
+</ul>
+<pre class="r"><code>#邏輯測試
+ifelse(1 == 1, &quot;YES&quot;, &quot;NO&quot;)</code></pre>
+<pre><code>## [1] &quot;YES&quot;</code></pre>
+<pre class="r"><code>#將引數向量化
+vec &lt;- c(1, 2, 3, 4, 5, 6)
+ifelse(vec &gt; 3, vec*2, vec) </code></pre>
+<pre><code>## [1]  1  2  3  8 10 12</code></pre>
+<pre class="r"><code>#ifelse檢測NA元素的結果為NA
+vec[4] &lt;- NA
+ifelse(vec &gt; 3, vec*2, vec)</code></pre>
+<pre><code>## [1]  1  2  3 NA 10 12</code></pre>
+<ul>
+<li>複合條件檢測</li>
+</ul>
+<pre class="r"><code>a &lt;- c(1, 0, 1, 0, 1, 0, 1)
+b &lt;- c(1, 2, 3, 4, 3, 2, 1)
+#單符號 &amp;、| 比較兩側的每個元素
+ifelse(a == 0 &amp; b == 1, &quot;T&quot;, &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;F&quot; &quot;F&quot; &quot;F&quot; &quot;F&quot; &quot;F&quot; &quot;F&quot; &quot;F&quot;</code></pre>
+<pre class="r"><code>ifelse(a == 0 | b == 1, &quot;T&quot;, &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;T&quot; &quot;T&quot; &quot;F&quot; &quot;T&quot; &quot;F&quot; &quot;T&quot; &quot;T&quot;</code></pre>
+<pre class="r"><code>#雙符號 &amp;&amp;、|| 比較兩側的第一個元素，回傳一個結果
+ifelse(a == 0 &amp;&amp; b == 1, &quot;T&quot;, &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;F&quot;</code></pre>
+<pre class="r"><code>ifelse(a == 0 || b == 1, &quot;T&quot;, &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;T&quot;</code></pre>
+<pre class="r"><code>#兩個以上條件，and比or優先處理
+ifelse(a &gt; 0 | b &lt; 3 &amp; a == 0, &quot;T&quot;, &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;F&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot;</code></pre>
 <h2 id="3">
 </h2>
 </div>
-<div id="data-types" class="section level1">
-<h1>Data Types</h1>
-<p><strong>數值資料</strong></p>
-<pre class="r"><code>is.numeric(x) #檢測變數是否為numeric</code></pre>
+<div id="loops" class="section level1">
+<h1>Loops</h1>
+<p><strong>for迴圈</strong></p>
+<p>for後面的引數依序有 變數、in(在)、向量 三個部分。</p>
+<pre class="r"><code>for(x in 1:10){
+  print(x)  #個別顯示結果
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<pre class="r"><code>#比較:向量化運算會一起顯示結果
+print(1:10)</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>mon &lt;- c(month.name) #建立月份名稱向量
+#建立與mon等長的月份長度向量，其值先以NA儲存
+monthlength &lt;- rep(NA, length(mon)) 
+names(monthlength) &lt;- mon #以mon替monthlength命名
+#對mon迭代，每次都把長度存到monthlength
+for(y in mon){
+  monthlength[y] &lt;- nchar(y)
+}
+monthlength</code></pre>
+<pre><code>##   January  February     March     April       May      June      July 
+##         7         8         5         5         3         4         4 
+##    August September   October  November  December 
+##         6         9         7         8         8</code></pre>
+<pre class="r"><code>#簡化:可以將monthlenth令為空向量
+mon &lt;- c(month.name)
+monthlength1 &lt;- c()
+for(y in mon){
+  monthlength1[y] &lt;- nchar(y)
+}
+#對照:直接呼叫nchar()也可
+monthlength2 &lt;-  nchar(mon)
+names(monthlength2) &lt;- mon
+identical(monthlength, monthlength1, monthlength2) #檢查三種方式得到的結果是否相同</code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>d &lt;- 1L #指派整數需附加L
-d</code></pre>
-<pre><code>## [1] 1</code></pre>
-<pre class="r"><code>is.integer(d) #檢測變數是否為interger</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>is.numeric(d) </code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>class(2L) #用class函數檢測資料型別</code></pre>
-<pre><code>## [1] &quot;integer&quot;</code></pre>
-<pre class="r"><code>class(2.6)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>class(2L * 2.6)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>class(5L / 2L)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<p><strong>字元(字串)資料</strong></p>
-<pre class="r"><code>x &lt;- factor(&quot;r studio&quot;) #用factor函數會出現Levels的訊息
-x</code></pre>
-<pre><code>## [1] r studio
-## Levels: r studio</code></pre>
-<pre class="r"><code>y &lt;- class(&quot;r studio&quot;) 
-y</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>nchar(y) #用nchar函數找出character的長度</code></pre>
+<p><strong>while迴圈</strong></p>
+<pre class="r"><code>x &lt;- 1
+while(x &lt;= 10){
+  print(x)         #於不滿足條件時跳出迴圈
+  x &lt;- x + 1       #這一行很重要
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<p><strong>repeat迴圈:與while相似，差別在while會先檢查指令</strong></p>
+<p>for, while, repeat 都可以使用break、next來改變迴圈狀態。</p>
+<pre class="r"><code>x &lt;- 1
+repeat{
+  if(x &gt; 10){
+    break             #break跳出迴圈
+  }else if(x == 5){
+    x &lt;- x + 1
+    next              #next跳過此項迭代過程
+  }
+  print(x)
+  x &lt;- x + 1
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<pre class="r"><code>#對照:用while迴圈表示
+x &lt;- 1
+while(x &lt;= 10){
+  if(x == 5){
+    x &lt;- x + 1
+    next
+  }
+  print(x)         
+  x &lt;- x + 1
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<pre class="r"><code>#對照:用for迴圈表示
+for(x in 1:10){
+  if(x == 5){
+    next
+  }
+  print(x)
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<p><strong>for, while 使用時機</strong></p>
+<ul>
+<li>計算句中字母數:有限個迭代次數，適合用for迴圈</li>
+</ul>
+<pre class="r"><code>palindromic &lt;- &quot;A man, a plan, a canal, panama.&quot;
+#用strsplit()裁切句子，在第二個引數&quot;&quot;中放入裁切條件
+chs &lt;- strsplit(palindromic,split = &quot;&quot;)[[1]]   #用[[]]選出list的特定資料
+chs</code></pre>
+<pre><code>##  [1] &quot;A&quot; &quot; &quot; &quot;m&quot; &quot;a&quot; &quot;n&quot; &quot;,&quot; &quot; &quot; &quot;a&quot; &quot; &quot; &quot;p&quot; &quot;l&quot; &quot;a&quot; &quot;n&quot; &quot;,&quot; &quot; &quot; &quot;a&quot; &quot; &quot;
+## [18] &quot;c&quot; &quot;a&quot; &quot;n&quot; &quot;a&quot; &quot;l&quot; &quot;,&quot; &quot; &quot; &quot;p&quot; &quot;a&quot; &quot;n&quot; &quot;a&quot; &quot;m&quot; &quot;a&quot; &quot;.&quot;</code></pre>
+<pre class="r"><code>#建立計數迴圈
+times &lt;- 0
+for(ch in chs){
+  if(ch == &quot;a&quot;){          # == :定義為&quot;exactly equal to ...&quot;(與 = 有些不同)
+    times = times + 1
+  }
+}
+times</code></pre>
 <pre><code>## [1] 9</code></pre>
-<pre class="r"><code>nchar(&quot;r studio&quot;)</code></pre>
-<pre><code>## [1] 8</code></pre>
-<pre class="r"><code>nchar(&quot;2019&quot;)</code></pre>
-<pre><code>## [1] 4</code></pre>
-<p><strong>日期</strong></p>
-<p>see more details in R documentation of Date-time Conversion Functions to and from Character</p>
-<pre class="r"><code>date1 &lt;- as.Date(&quot;2019-7-13&quot;) #Date儲存日期
-date1</code></pre>
-<pre><code>## [1] &quot;2019-07-13&quot;</code></pre>
-<pre class="r"><code>class(date1)</code></pre>
-<pre><code>## [1] &quot;Date&quot;</code></pre>
-<pre class="r"><code>as.numeric(date1) #自1970年1月1日算起的天數</code></pre>
-<pre><code>## [1] 18090</code></pre>
-<pre class="r"><code>date2 &lt;- as.POSIXct(&quot;2019-7-13 08:10&quot;) #用POSIXct儲存日期和時間
-date2</code></pre>
-<pre><code>## [1] &quot;2019-07-13 08:10:00 CST&quot;</code></pre>
-<pre class="r"><code>class(date2)</code></pre>
-<pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
-<pre class="r"><code>as.numeric(date2) #自1970年1月1日算起的秒數</code></pre>
-<pre><code>## [1] 1562976600</code></pre>
-<pre class="r"><code>class(as.numeric(date2)) #轉換資料型別</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<p><strong>邏輯資料</strong></p>
-<pre class="r"><code>TRUE * 6 #數值表示TRUE=1，1*6=6</code></pre>
-<pre><code>## [1] 6</code></pre>
-<pre class="r"><code>FALSE * 6 #數值表示FALSE=0，0*6=0</code></pre>
-<pre><code>## [1] 0</code></pre>
-<pre class="r"><code>q &lt;- TRUE
-class(q)</code></pre>
-<pre><code>## [1] &quot;logical&quot;</code></pre>
-<pre class="r"><code>is.logical(q) #檢測變數是否為logical</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>2 == 3 # 2 是否等於 3 ?</code></pre>
-<pre><code>## [1] FALSE</code></pre>
-<pre class="r"><code>2 != 3 # 2 是否不等於 3 ?</code></pre>
-<pre><code>## [1] TRUE</code></pre>
+<ul>
+<li>擲銅板:不確定正反面情形，適合用while迴圈</li>
+</ul>
+<pre class="r"><code>results_coin &lt;- c() #建立一個空向量來放置每一次投擲的結果
+side &lt;-  c(TRUE, FALSE) #TRUE為正面，FALSE為反面
+#建立投擲迴圈
+flips &lt;- 1 
+while(sum(results_coin) &lt; 3){                   #擲幾次，才出現第三個正面
+  #將每次flip的結果計入results向量中
+  results_coin[flips] &lt;- sample(side, size = 1) #sample():從向量中隨機抽樣的函數，size:指定隨機抽樣的個數
+  flips &lt;- flips + 1
+}
+results_coin  #因為是隨機抽樣，每次的結果不同</code></pre>
+<pre><code>## [1]  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
+<ul>
+<li>擲骰子:不確定點數情形，適合用while迴圈</li>
+</ul>
+<pre class="r"><code>results_dice &lt;- c()
+throws &lt;- 1 
+while(sum(results_dice) &lt; 20){             #擲幾次，骰子和才大於20
+  results_dice[throws] &lt;- sample(1:6, size = 1) 
+  throws &lt;- throws + 1
+}
+results_dice</code></pre>
+<pre><code>## [1] 4 4 5 2 2 1 6</code></pre>
+<p><em><a href="#0">back</a></em></p>
 <h2 id="4">
 </h2>
 </div>
-<div id="missing-value" class="section level1">
-<h1>Missing value</h1>
-<p><strong>NA</strong></p>
-<pre class="r"><code>k &lt;- c(1,2,NA,4,NA,5) #NA會被vector視作一個元素
-k</code></pre>
-<pre><code>## [1]  1  2 NA  4 NA  5</code></pre>
-<pre class="r"><code>is.na(k) #檢測是否為遺失值</code></pre>
-<pre><code>## [1] FALSE FALSE  TRUE FALSE  TRUE FALSE</code></pre>
-<pre class="r"><code>mean(k) #元素有NA無法計算</code></pre>
-<pre><code>## [1] NA</code></pre>
-<pre class="r"><code>mean(k, na.rm=TRUE) #用na.rm=TRUE排除遺失值再計算</code></pre>
-<pre><code>## [1] 3</code></pre>
-<p><strong>NULL</strong></p>
-<pre class="r"><code>s &lt;- c(1,2,NULL,4,NULL,5) #NULL是虛無的，不能成為vector的一部分
-s</code></pre>
-<pre><code>## [1] 1 2 4 5</code></pre>
+<div id="apply-functions" class="section level1">
+<h1>Apply functions</h1>
+<p>取代迴圈，增加程式執行效率。</p>
+<p><strong>apply(X, MARGIN, FUN, …)</strong></p>
+<p>apply()的第一引數為操作物件，該物件的資料型別只能是matrix，第二引數決定對列(以1表示)或行(以2表示)運算，第三個引數為運算函數。</p>
+<pre class="r"><code>mat &lt;- array(1:20, c(4, 5)) #用array建立矩陣
+mat</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    5    9   13   17
+## [2,]    2    6   10   14   18
+## [3,]    3    7   11   15   19
+## [4,]    4    8   12   16   20</code></pre>
+<pre class="r"><code>rsum_mat &lt;- apply(mat, 1, sum) #每列加總
+rsum_mat </code></pre>
+<pre><code>## [1] 45 50 55 60</code></pre>
+<pre class="r"><code>is.integer(rsum_mat)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#對照:使用rowSums()可得相同結果，但是資料型別不同
+rowSums(mat)  </code></pre>
+<pre><code>## [1] 45 50 55 60</code></pre>
+<pre class="r"><code>is.numeric(rowSums(mat))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>a &lt;- as.integer(rowSums(mat))
+identical(rsum_mat, a) #轉換為相同的資料型別，才能用identical()檢驗</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#找出每一行被3整除的數字個數
+apply(mat, 2,function(x) length(x[x %% 3 == 0]))</code></pre>
+<pre><code>## [1] 1 1 2 1 1</code></pre>
+<pre class="r"><code>#找出每一行被3整除的數字
+b &lt;- apply(mat, 2,function(x) x[x %% 3 == 0]) 
+b</code></pre>
+<pre><code>## [[1]]
+## [1] 3
+## 
+## [[2]]
+## [1] 6
+## 
+## [[3]]
+## [1]  9 12
+## 
+## [[4]]
+## [1] 15
+## 
+## [[5]]
+## [1] 18</code></pre>
+<pre class="r"><code>class(b) #回傳的結果b是一個list</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>class(b[1]) #b內又含有5個list</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>class(b[[3]]) #每個list裡面的項目屬性為integer</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>#如果元素存在NA值，該元素所處列或行的運算結果為NA
+mat[3, 2] &lt;- NA
+apply(mat, 2, mean)</code></pre>
+<pre><code>## [1]  2.5   NA 10.5 14.5 18.5</code></pre>
+<pre class="r"><code>c &lt;- apply(mat, 2, mean, na.rm = TRUE) #設定na.rm = TRUE排除NA值
+c</code></pre>
+<pre><code>## [1]  2.500000  6.333333 10.500000 14.500000 18.500000</code></pre>
+<pre class="r"><code>round(c, digits = 1) #round()取到一位小數</code></pre>
+<pre><code>## [1]  2.5  6.3 10.5 14.5 18.5</code></pre>
+<pre class="r"><code>data(mtcars)
+head(mtcars, 3)</code></pre>
+<pre><code>##                mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
+<pre class="r"><code>max_mtcars &lt;- apply(mtcars, 2, max) #對每一行取最大值
+max_mtcars</code></pre>
+<pre><code>##     mpg     cyl    disp      hp    drat      wt    qsec      vs      am 
+##  33.900   8.000 472.000 335.000   4.930   5.424  22.900   1.000   1.000 
+##    gear    carb 
+##   5.000   8.000</code></pre>
+<pre class="r"><code>max_mtcars1 &lt;- apply(t(mtcars), 1, max) #轉置後對每一列取最大值
+identical(max_mtcars,max_mtcars1) #兩種方式產生的結果相同</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>sd_mtcars &lt;- apply(mtcars,2,sd) #對每行取標準差
+sd_mtcars</code></pre>
+<pre><code>##         mpg         cyl        disp          hp        drat          wt 
+##   6.0269481   1.7859216 123.9386938  68.5628685   0.5346787   0.9784574 
+##        qsec          vs          am        gear        carb 
+##   1.7869432   0.5040161   0.4989909   0.7378041   1.6152000</code></pre>
+<p><strong>lapply(X, FUN, …)</strong></p>
+<ul>
+<li><p>lapply的l代表“list”，回傳的結果都會以“list”的方式呈現。</p></li>
+<li><p>lapply()第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，函數會套用到每個元素上，因此不能決定要對行或列運算。</p></li>
+</ul>
+<pre class="r"><code>list1 &lt;- list(x = matrix(1:9, ncol = 3), y = 1:5, z = c(6, 7, 8, 9))
+lapply(list1, class)</code></pre>
+<pre><code>## $x
+## [1] &quot;matrix&quot;
+## 
+## $y
+## [1] &quot;integer&quot;
+## 
+## $z
+## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>unlist(lapply(list1, class)) #unlist()讓lapply的結果以vector的方式呈現</code></pre>
+<pre><code>##         x         y         z 
+##  &quot;matrix&quot; &quot;integer&quot; &quot;numeric&quot;</code></pre>
+<pre class="r"><code>#sapply()會直接回傳vector
+identical(sapply(list1, class), unlist(lapply(list1, class))) </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#對每個元素平方
+list2 &lt;- lapply(list1, function(v, factor){  
+           v^factor
+         }
+         , factor = 2)
+list2</code></pre>
+<pre><code>## $x
+##      [,1] [,2] [,3]
+## [1,]    1   16   49
+## [2,]    4   25   64
+## [3,]    9   36   81
+## 
+## $y
+## [1]  1  4  9 16 25
+## 
+## $z
+## [1] 36 49 64 81</code></pre>
+<pre class="r"><code>#對照:簡化的寫法
+rf_list2 &lt;- lapply(list1, function(u) u^2)
+identical(list2, rf_list2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#如果list中的每個元素都是matrix，可以用lapply同時擷取特定位置的元素
+lapply(list(x = matrix(1:9, ncol = 3), y = matrix(1:16, ncol = 2), z = matrix(1:16, ncol = 8)), &quot;[&quot;,1,2 ) #擷取第一列第二行的元素</code></pre>
+<pre><code>## $x
+## [1] 4
+## 
+## $y
+## [1] 9
+## 
+## $z
+## [1] 3</code></pre>
+<p><strong>sapply(X, FUN, …, simplify = TRUE, USE.NAMES = TRUE)</strong></p>
+<ul>
+<li><p>sapply的s代表“simple”，回傳的結果會將list“簡化”為vector，相當於unlist(lapply())。</p></li>
+<li><p>sapply和lapply類似，第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，同樣也不能決定要對行或列運算。</p></li>
+<li><p>sapply與lapply的差異:多了 USE.NAME 和 simplify 兩個引數。</p></li>
+</ul>
+<pre class="r"><code>#rnorm(a, b, c):產生a個平均數為b、標準差為c的常態分佈隨機變數，因為是隨機變數，每次的結果都不同
+#range():range1為最小值，range2為最大值
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x))) </code></pre>
+<pre><code>##            [,1]     [,2]
+## range1 4.559387 4.911175
+## range2 7.471548 9.982403
+## mean   5.936937 7.277382</code></pre>
+<pre class="r"><code>#對照:lapply()回傳的是list
+lapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)))</code></pre>
+<pre><code>## [[1]]
+##   range1   range2     mean 
+## 4.823278 7.472409 6.688010 
+## 
+## [[2]]
+##    range1    range2      mean 
+##  5.144043 10.334913  8.214817</code></pre>
+<pre class="r"><code>#simplify2array()可以把lapply生成的list簡化為array
+simplify2array(lapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x))))</code></pre>
+<pre><code>##             [,1]      [,2]
+## range1  5.603778  3.070981
+## range2 11.847116 10.091365
+## mean    8.277017  6.822333</code></pre>
+<pre class="r"><code>#simplify2array()的功能與在sapply中指定 simplify = &quot;array&quot; 的效果相同 
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)), simplify = &quot;array&quot;) </code></pre>
+<pre><code>##             [,1]     [,2]
+## range1  5.230019 5.197933
+## range2 11.836189 9.053420
+## mean    8.113366 7.708447</code></pre>
+<pre class="r"><code>#若sapply()的引數 USE.NAMES = FALSE 且 simplify = FALSE，回傳的資料型別會與lapply()相同
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)), USE.NAMES = FALSE, simplify = FALSE)</code></pre>
+<pre><code>## [[1]]
+##   range1   range2     mean 
+## 1.947419 8.594521 5.701270 
+## 
+## [[2]]
+##   range1   range2     mean 
+## 6.589897 9.579486 8.492279</code></pre>
+<p><strong>vapply(X, FUN, FUN.VALUE, …, USE.NAMES = TRUE)</strong></p>
+<ul>
+<li><p>vapply和sapply類似，第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，同樣也不能決定要對行或列運算。</p></li>
+<li><p>vapply和sapply的差異:FUN.VALUE(length)可以預先指定資料輸出的型別，降低誤判機率，FUN.VALUE為回傳的資料性質–data format，length為回傳資料長度。</p>
+<ul>
+<li>延續sapply的例子，vapply可以有很多種寫法</li>
+</ul></li>
+</ul>
+<pre class="r"><code>vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),double(3)) </code></pre>
+<pre><code>##             [,1]     [,2]
+## range1  4.330323 5.034972
+## range2 11.443903 9.693254
+## mean    7.857956 7.315486</code></pre>
+<pre class="r"><code>vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),numeric(3))</code></pre>
+<pre><code>##             [,1]     [,2]
+## range1  3.773310 3.223303
+## range2 10.073919 8.302349
+## mean    5.944347 6.620580</code></pre>
+<pre class="r"><code>vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),vector(mode = &quot;double&quot;, length = 3))</code></pre>
+<pre><code>##            [,1]      [,2]
+## range1 5.670021  4.580330
+## range2 9.156711 10.911371
+## mean   8.163539  7.527292</code></pre>
+<pre class="r"><code>vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),vector(mode = &quot;numeric&quot;, length = 3))</code></pre>
+<pre><code>##            [,1]      [,2]
+## range1 4.904108  2.852638
+## range2 9.288593 10.544707
+## mean   7.535596  7.048511</code></pre>
+<ul>
+<li>sapply和vapply的操作</li>
+</ul>
+<pre class="r"><code>#先存取一組數列
+s1 &lt;- sapply(3:8, seq)
+#用sapply查看它的fivenum:min, Q1, Q2, Q3, max
+sapply(s1, fivenum)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]  1.0  1.0    1  1.0  1.0  1.0
+## [2,]  1.5  1.5    2  2.0  2.5  2.5
+## [3,]  2.0  2.5    3  3.5  4.0  4.5
+## [4,]  2.5  3.5    4  5.0  5.5  6.5
+## [5,]  3.0  4.0    5  6.0  7.0  8.0</code></pre>
+<pre class="r"><code>#用vapply命名:FUN.VALUE功能為限制list的長相，這裡是替s1命名，0表示須為數字，換成其他常數不影響結果
+n &lt;- vapply(s1, fivenum, c(Min. = 0, &quot;1st Qu.&quot; = 0, Median = 0, &quot;3rd Qu.&quot; = 0, Max. = 0))
+n</code></pre>
+<pre><code>##         [,1] [,2] [,3] [,4] [,5] [,6]
+## Min.     1.0  1.0    1  1.0  1.0  1.0
+## 1st Qu.  1.5  1.5    2  2.0  2.5  2.5
+## Median   2.0  2.5    3  3.5  4.0  4.5
+## 3rd Qu.  2.5  3.5    4  5.0  5.5  6.5
+## Max.     3.0  4.0    5  6.0  7.0  8.0</code></pre>
+<pre class="r"><code>#目標:想在n插入一個Mean列，和median做比較
+#雖然在vapply中，設定FUN.VALUE = matrix(1)，而且也有對列命名，輸出的結果仍是vector，那是因為FUN.VALUE = matrix(1)的設定只是告訴R這七次結果的長相，而vapply()本身就有simplify的功能[Simplification is always done in vapply.]，所以接收到7個matrix(1)後，會自動減化以vector呈現
+vapply(s1, function(x) (Mean = mean(x)), matrix(1)) </code></pre>
+<pre><code>## [1] 2.0 2.5 3.0 3.5 4.0 4.5</code></pre>
+<pre class="r"><code>#至於sapply，無論其中的simplify引數如何設定，它都會覺得每個輸出都要叫做Mean
+sapply(s1, function(x) c(Mean = mean(x)))</code></pre>
+<pre><code>## Mean Mean Mean Mean Mean Mean 
+##  2.0  2.5  3.0  3.5  4.0  4.5</code></pre>
+<pre class="r"><code>#修正上述結果:在matrix的引數中，nrow設定列數為1，dimnames設定列名稱，注意dimnames必須是list
+m1 &lt;- matrix(sapply(s1, function(x) (mean = mean(x))), nrow = 1, dimnames = list(c(&quot;Mean&quot;)))
+m2 &lt;- matrix(vapply(s1, function(x) (mean = mean(x)), numeric(1)),nrow = 1, dimnames = list(c(&quot;Mean&quot;)))
+m2  #輸出一個Mean列</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## Mean    2  2.5    3  3.5    4  4.5</code></pre>
+<pre class="r"><code>identical(m1, m2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#用rbind()將m2插入fivenum中的第四列，結果會跟summary一樣
+rbind(n[1:3, ], m2, n[4:5, ])</code></pre>
+<pre><code>##         [,1] [,2] [,3] [,4] [,5] [,6]
+## Min.     1.0  1.0    1  1.0  1.0  1.0
+## 1st Qu.  1.5  1.5    2  2.0  2.5  2.5
+## Median   2.0  2.5    3  3.5  4.0  4.5
+## Mean     2.0  2.5    3  3.5  4.0  4.5
+## 3rd Qu.  2.5  3.5    4  5.0  5.5  6.5
+## Max.     3.0  4.0    5  6.0  7.0  8.0</code></pre>
+<pre class="r"><code>#summary會顯示資料的min, Q1, Q2, Q3, max, mean，不須額外命名
+sapply(s1, summary) </code></pre>
+<pre><code>##         [,1] [,2] [,3] [,4] [,5] [,6]
+## Min.     1.0 1.00    1 1.00  1.0 1.00
+## 1st Qu.  1.5 1.75    2 2.25  2.5 2.75
+## Median   2.0 2.50    3 3.50  4.0 4.50
+## Mean     2.0 2.50    3 3.50  4.0 4.50
+## 3rd Qu.  2.5 3.25    4 4.75  5.5 6.25
+## Max.     3.0 4.00    5 6.00  7.0 8.00</code></pre>
+<p><strong>mapply(FUN, …, MoreArgs = NULL, SIMPLIFY = TRUE, USE.NAMES = TRUE)</strong></p>
+<ul>
+<li><p>mapply和vapply都是sapply的變形函數，m代表mulitvariate，可以同時對多個list中的每個元素套用運算函數。</p></li>
+<li><p>mapply的第一引數為運算函數，後方引數可插入多個list，MoreArgs為參數列表，SIMPLIFY 決定是否數組化，USE.NAMES決定是否設置字串為數據名。</p></li>
+</ul>
+<pre class="r"><code>#用paste()黏貼重複的字串，collapse決定字串間的連接方式，sep則是決定引數間的連接方式
+#本例只有一個引數，不用設定sep，也可以用paste0() : paste0(…, collapse) is equivalent to paste(…, sep = &quot;&quot;, collapse)
+mapply(function(x, y) paste(rep(x, y) , collapse = &quot;&quot;) , 
+       x = LETTERS[1:6], y = 6:1, SIMPLIFY = T, USE.NAMES = F ) #簡化且不設字串為數據名</code></pre>
+<pre><code>## [1] &quot;AAAAAA&quot; &quot;BBBBB&quot;  &quot;CCCC&quot;   &quot;DDD&quot;    &quot;EE&quot;     &quot;F&quot;</code></pre>
+<pre class="r"><code>#mapply檢驗結果
+p &lt;- mapply(rep ,1, 3:5)
+q &lt;- mapply(rep, times = 3:5, 1)
+r &lt;- mapply(rep, times = 3:5, MoreArgs = list(x = 1))
+mapply(identical, p, q, r)</code></pre>
+<pre><code>## [1] TRUE TRUE TRUE</code></pre>
+<pre class="r"><code>r</code></pre>
+<pre><code>## [[1]]
+## [1] 1 1 1
+## 
+## [[2]]
+## [1] 1 1 1 1
+## 
+## [[3]]
+## [1] 1 1 1 1 1</code></pre>
+<pre class="r"><code>#比較:
+p1 &lt;- mapply(rep ,1:3, 3:5)
+q1 &lt;- mapply(rep, times = 3:5, 1:3)
+r1 &lt;- mapply(rep, times = 3:5, MoreArgs = list(x = 1:3))
+mapply(identical, p1, q1)</code></pre>
+<pre><code>## [1] TRUE TRUE TRUE</code></pre>
+<pre class="r"><code>mapply(identical, q1, r1) #This implies p1 and r1 are not identical.</code></pre>
+<pre><code>## [1] FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>p1</code></pre>
+<pre><code>## [[1]]
+## [1] 1 1 1
+## 
+## [[2]]
+## [1] 2 2 2 2
+## 
+## [[3]]
+## [1] 3 3 3 3 3</code></pre>
+<pre class="r"><code>r1</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 1 2 3 1 2 3
+## 
+## [[2]]
+##  [1] 1 2 3 1 2 3 1 2 3 1 2 3
+## 
+## [[3]]
+##  [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3</code></pre>
+<pre class="r"><code>#names from first
+addfunc &lt;- function(x, y){
+  seq(x) + y
+} 
+mapply(addfunc, c(a = 1, b = 2,  c = 3), c(A = 5, B = 0, C = -5)) </code></pre>
+<pre><code>## $a
+## [1] 6
+## 
+## $b
+## [1] 1 2
+## 
+## $c
+## [1] -4 -3 -2</code></pre>
+<p><strong>rapply(object, f, classes = “ANY”, deflt = NULL, how = c(“unlist”, “replace”, “list”), …)</strong></p>
+<ul>
+<li><p>rapply是lapply的遞迴版本，第一引數為操作物件，第二引數為運算函數。</p></li>
+<li><p>classes:設定函數執行的資料型別，如果不確定可以輸入 “ANY”讓程式自動輸出。</p></li>
+</ul>
+<pre class="r"><code>vec_data &lt;- list( v1 = matrix(1:16, 4), v2 = 1:10,  v3 = c(&quot;rstudio&quot;, &quot;rmd&quot;) ,
+                  v4 = data.frame(a = runif(10), b = LETTERS[1:10] ))
+l &lt;- rapply(vec_data, function(x)rep(x,2), class = &quot;ANY&quot;,how = &quot;list&quot;, deflt = NA)
+l[[4]][2]  #觀察部分資料發現重複了兩次</code></pre>
+<pre><code>## $b
+##  [1] A B C D E F G H I J A B C D E F G H I J
+## Levels: A B C D E F G H I J</code></pre>
+<ul>
+<li>deflt(default，默認):是當操作物件為非classes指定的型別時，該物件會被deflt預先指定的值取代。</li>
+</ul>
+<pre class="r"><code>rapply(vec_data, function(x){x^2}, class = c(&quot;matrix&quot;,&quot;integer&quot;),how=&quot;list&quot;,deflt= &quot;no result&quot;)</code></pre>
+<pre><code>## $v1
+##      [,1] [,2] [,3] [,4]
+## [1,]    1   25   81  169
+## [2,]    4   36  100  196
+## [3,]    9   49  121  225
+## [4,]   16   64  144  256
+## 
+## $v2
+##  [1]   1   4   9  16  25  36  49  64  81 100
+## 
+## $v3
+## [1] &quot;no result&quot;
+## 
+## $v4
+## $v4$a
+## [1] &quot;no result&quot;
+## 
+## $v4$b
+## [1] &quot;no result&quot;</code></pre>
+<ul>
+<li><p>how = :</p>
+<ul>
+<li><p>how(“list”):以list輸出。how(“unlist”):以vector輸出，其結果和how = c(“unlist”, “replace”, “list”)相同。</p></li>
+<li><p>how(“replace”):當操作物件為非classes指定的型別時，無論deflt預先指定甚麼值，都會被原來的值取代。</p></li>
+</ul></li>
+</ul>
+<pre class="r"><code>rapply(vec_data, function(x)paste(x,&quot;@&quot;,sep = &quot;--&quot;, collapse = &quot; &amp; &quot;),
+       class = c(&quot;character&quot;), how = &quot;unlist&quot;, deflt = NA)  </code></pre>
+<pre><code>##                    v1                    v2                    v3 
+##                    NA                    NA &quot;rstudio--@ &amp; rmd--@&quot; 
+##                  v4.a                  v4.b 
+##                    NA                    NA</code></pre>
+<pre class="r"><code>rapply(vec_data, sort, class = c(&quot;numeric&quot;), how = &quot;replace&quot;, deflt = NA)</code></pre>
+<pre><code>## $v1
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    5    9   13
+## [2,]    2    6   10   14
+## [3,]    3    7   11   15
+## [4,]    4    8   12   16
+## 
+## $v2
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $v3
+## [1] &quot;rstudio&quot; &quot;rmd&quot;    
+## 
+## $v4
+##             a b
+## 1  0.03322913 A
+## 2  0.07104764 B
+## 3  0.08779845 C
+## 4  0.10590212 D
+## 5  0.11465677 E
+## 6  0.56687327 F
+## 7  0.66127330 G
+## 8  0.83270758 H
+## 9  0.86433579 I
+## 10 0.89682278 J</code></pre>
+<p><strong>tapply(X, INDEX, FUN = NULL, …, default = NA, simplify = TRUE)</strong></p>
+<ul>
+<li><p>通常第一引數是運算函數套用的項目，第二引數是要被分群的欄位，第三引數是運算函數。</p></li>
+<li><p>default = NA:默認NA值；simplify = TRUE:簡化，不轉換為list的形式。</p></li>
+</ul>
+<pre class="r"><code>data(&quot;Orange&quot;)
+#對樹木編號分群，對其周長取平均
+tapply(Orange$circumference, Orange$Tree, mean)  </code></pre>
+<pre><code>##         3         1         5         2         4 
+##  94.00000  99.57143 111.14286 135.28571 139.28571</code></pre>
+<pre class="r"><code>#對樹木編號分群，列出周長和半徑
+orange_count &lt;- tapply(Orange$circumference, Orange$Tree, function(x) c(x, x/(2*pi)))
+orange_count[[3]]  #顯示3號樹木的結果</code></pre>
+<pre><code>##  [1]  30.000000  49.000000  81.000000 125.000000 142.000000 174.000000
+##  [7] 177.000000   4.774648   7.798592  12.891550  19.894368  22.600002
+## [13]  27.692960  28.170425</code></pre>
+<pre class="r"><code>#list()會分別顯示周長列表和其對應的半徑列表
+orange_count1 &lt;- tapply(Orange$circumference, Orange$Tree, function(x) list(x, x/(2*pi)))
+orange_count1[[3]]  #顯示3號樹木的結果</code></pre>
+<pre><code>## [[1]]
+## [1]  30  49  81 125 142 174 177
+## 
+## [[2]]
+## [1]  4.774648  7.798592 12.891550 19.894368 22.600002 27.692960 28.170425</code></pre>
+<p><strong>eapply(env, FUN, …, all.names = FALSE, USE.NAMES = TRUE)</strong></p>
+<ul>
+<li><p>eapply和lapply相似，輸出的資料型別都是list，eapply的e代表“environment”，第一引數必須是environment，第二引數為運算函數。</p></li>
+<li><p>USE.NAMES決定是否對生成的list命名。</p></li>
+</ul>
+<pre class="r"><code># create a new environment
+ev &lt;- new.env()
+# create a list from the initiated environment
+ev$a &lt;- runif(5, min = 0, max = 10)
+ev$b &lt;- matrix(1:16, 2)
+ev$c &lt;- data.frame(1:4,5:8)
+eapply(ev, function(x) x * 2, USE.NAMES = FALSE) #將environment中的每個元素乘兩倍</code></pre>
+<pre><code>## [[1]]
+## [1]  0.8497478 16.1699408  8.7344283  7.3880757 15.4913558
+## 
+## [[2]]
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    2    6   10   14   18   22   26   30
+## [2,]    4    8   12   16   20   24   28   32
+## 
+## [[3]]
+##   X1.4 X5.8
+## 1    2   10
+## 2    4   12
+## 3    6   14
+## 4    8   16</code></pre>
+<pre class="r"><code># the environment within a function
+simple_func &lt;- function(){
+  a &lt;- runif(5, min = 0, max = 10)
+  b &lt;- matrix(1:16, 2)
+  c &lt;- data.frame(1:4,5:8)
+  
+  eapply(environment(), ncol )
+}
+simple_func()</code></pre>
+<pre><code>## $c
+## [1] 2
+## 
+## $b
+## [1] 8
+## 
+## $a
+## NULL</code></pre>
+<pre class="r"><code>#R環境中的前六個變量
+tail(ls())</code></pre>
+<pre><code>## [1] &quot;time_interval&quot; &quot;times&quot;         &quot;vec&quot;           &quot;vec_data&quot;     
+## [5] &quot;x&quot;             &quot;y&quot;</code></pre>
+<pre class="r"><code>#查看R環境中，前六個變量占記憶體的大小
+env &lt;- eapply(environment(), object.size)
+str(head(env)) </code></pre>
+<pre><code>## List of 6
+##  $ r1         : &#39;object_size&#39; num 384
+##  $ list1      : &#39;object_size&#39; num 864
+##  $ a          : &#39;object_size&#39; num 64
+##  $ list2      : &#39;object_size&#39; num 960
+##  $ b          : &#39;object_size&#39; num 376
+##  $ simple_func: &#39;object_size&#39; num 9968</code></pre>
+<ul>
+<li>all.names決定只要將函數套用至envrionment中可見的元素，或是每個元素。 [All.names, an optional Boolean parameter, specifies if the function input should be applied to just the visible elements of the environment, or to all objects.]</li>
+</ul>
+<pre class="r"><code>evcount &lt;- new.env()
+evcount$.test &lt;- 36
+evcount$other_test &lt;- 64
+# Names that begin with a dot (hidden objects) are excluded from the function’s application. 
+eapply(evcount, sqrt)</code></pre>
+<pre><code>## $other_test
+## [1] 8</code></pre>
+<pre class="r"><code># To apply the function to every object in the environment, we need to set the parameter all.names = TRUE.
+eapply(evcount, sqrt, all.names = TRUE)</code></pre>
+<pre><code>## $other_test
+## [1] 8
+## 
+## $.test
+## [1] 6</code></pre>
+<p><strong>rep(x, times = 1, length.out = NA, each = 1)</strong></p>
+<ul>
+<li><p>each:設定操作物件各重複的次數，times:設定操作物件重複次數。</p></li>
+<li><p>length.out(len):輸出總長度，須為非負整數。</p></li>
+<li><p>延伸: rep.int(x, times) rep_len(x, length.out)</p></li>
+</ul>
+<pre class="r"><code>Z &lt;- sapply(list(matrix(1:9, 3, 3), matrix(4:15, 4, 3), matrix(8:10, 3,2)),
+            &quot;[&quot;, 1,1 ) #分別取出三個矩陣位於第一列第一行的元素
+Z</code></pre>
+<pre><code>## [1] 1 4 8</code></pre>
+<pre class="r"><code>rep(Z, times = c(3,1,2)) #依照向量設定重複</code></pre>
+<pre><code>## [1] 1 1 1 4 8 8</code></pre>
+<pre class="r"><code>#replication of len, each and times :
+#&quot;each&quot; is performed first:
+rep(Z, each = 2, len = 10) #依照each的規則&quot;到len指定的長度(如果有的話)為止&quot;</code></pre>
+<pre><code>##  [1] 1 1 4 4 8 8 1 1 4 4</code></pre>
+<pre class="r"><code>#If only len and times are given, len takes priority and times is ignored.
+rep(Z, times = c(3,1,2), len =9 ) #等同於rep(z, len = 9)</code></pre>
+<pre><code>## [1] 1 4 8 1 4 8 1 4 8</code></pre>
+<pre class="r"><code>x &lt;- .leap.seconds[1:3]
+rep(x, 2) #對整個x重複兩遍</code></pre>
+<pre><code>## [1] &quot;1972-07-01 08:00:00 CST&quot; &quot;1973-01-01 08:00:00 CST&quot;
+## [3] &quot;1974-01-01 08:00:00 CST&quot; &quot;1972-07-01 08:00:00 CST&quot;
+## [5] &quot;1973-01-01 08:00:00 CST&quot; &quot;1974-01-01 08:00:00 CST&quot;</code></pre>
+<pre class="r"><code>rep(as.POSIXlt(x), rep(2,3)) #對X的每一項分別重複兩遍，等同於下面兩項:</code></pre>
+<pre><code>## [1] &quot;1972-07-01 08:00:00 CST&quot; &quot;1972-07-01 08:00:00 CST&quot;
+## [3] &quot;1973-01-01 08:00:00 CST&quot; &quot;1973-01-01 08:00:00 CST&quot;
+## [5] &quot;1974-01-01 08:00:00 CST&quot; &quot;1974-01-01 08:00:00 CST&quot;</code></pre>
+<pre class="r"><code>#rep(as.POSIXlt(x),times =  c(2,2,2))
+#rep(as.POSIXlt(x),each = 2)</code></pre>
+<p><strong>by(data, INDICES, FUN, …, simplify = TRUE)</strong></p>
+<ul>
+<li><p>by與tapply相似，都有對資料分群的功能。第一引數是操作物件，第二引數是要被分群的列位，第三引數是套用至操作物件的運算函數。</p></li>
+<li><p>simplify = TRUE:簡化，不轉換為list的形式。</p></li>
+</ul>
+<pre class="r"><code>data(Orange)
+by(Orange[,2:3], Orange$Tree, colMeans)</code></pre>
+<pre><code>## Orange$Tree: 3
+##           age circumference 
+##      922.1429       94.0000 
+## -------------------------------------------------------- 
+## Orange$Tree: 1
+##           age circumference 
+##     922.14286      99.57143 
+## -------------------------------------------------------- 
+## Orange$Tree: 5
+##           age circumference 
+##      922.1429      111.1429 
+## -------------------------------------------------------- 
+## Orange$Tree: 2
+##           age circumference 
+##      922.1429      135.2857 
+## -------------------------------------------------------- 
+## Orange$Tree: 4
+##           age circumference 
+##      922.1429      139.2857</code></pre>
 <h2 id="5">
 </h2>
 </div>
-<div id="pipe" class="section level1">
-<h1>Pipe</h1>
-<p>magrittr套件中的pipe運算子會將左邊的值或物件移植到其右邊函數的第一個引數</p>
-<pre class="r"><code>library(magrittr)
-x &lt;- 1:10
-x %&gt;% mean #用pipe將X移植到mean函數(pipe讀取方式由左到右)</code></pre>
-<pre><code>## [1] 5.5</code></pre>
-<pre class="r"><code>y &lt;- c(1,2,NA,3,NA,4,5)
-sum(is.na(y)) #嵌入函數方法</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>y %&gt;% is.na %&gt;% sum #用pipe串聯函數，函數不須額外引數則不必括號</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>y %&gt;% mean(na.rm=TRUE) #額外引數需括號</code></pre>
-<pre><code>## [1] 3</code></pre>
-<p><em><a href="#0">back</a></em></p>
-<h2 id="6">
-</h2>
-</div>
-<div id="vector" class="section level1">
-<h1>Vector</h1>
-<p><strong>向量運算</strong></p>
-<pre class="r"><code>x &lt;- c(1,2,3,4,5) #&quot;c&quot; means &quot;combine&quot;
-x</code></pre>
-<pre><code>## [1] 1 2 3 4 5</code></pre>
-<pre class="r"><code>x + 2 #每個元素加2</code></pre>
-<pre><code>## [1] 3 4 5 6 7</code></pre>
-<pre class="r"><code>x - 2 #每個元素減2</code></pre>
-<pre><code>## [1] -1  0  1  2  3</code></pre>
-<pre class="r"><code>x * 2 #每個元素乘2</code></pre>
-<pre><code>## [1]  2  4  6  8 10</code></pre>
-<pre class="r"><code>x / 2 #每個元素除2</code></pre>
-<pre><code>## [1] 0.5 1.0 1.5 2.0 2.5</code></pre>
-<pre class="r"><code>x ^ 2 #每個元素平方</code></pre>
-<pre><code>## [1]  1  4  9 16 25</code></pre>
-<pre class="r"><code>sqrt(x) #每個元素開平方</code></pre>
-<pre><code>## [1] 1.000000 1.414214 1.732051 2.000000 2.236068</code></pre>
-<pre class="r"><code>y &lt;- c(6,7,8,9,10)
-y</code></pre>
-<pre><code>## [1]  6  7  8  9 10</code></pre>
-<pre class="r"><code>z &lt;- x + y #兩(相同長度)向量可相加 [減乘除亦同]
-total &lt;- sum(z) #sum向量加總
-total</code></pre>
-<pre><code>## [1] 55</code></pre>
-<pre class="r"><code>mean &lt;- mean(z) #mean向量平均
-mean</code></pre>
-<pre><code>## [1] 11</code></pre>
-<pre class="r"><code>x &lt;- 1:10 # &quot;:&quot;可生成任意連續數字
-x</code></pre>
-<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<pre class="r"><code>length(x) #查看向量長度</code></pre>
-<pre><code>## [1] 10</code></pre>
-<p><strong>對不相等向量運算</strong></p>
-<pre class="r"><code>x &lt;- c(1,2,3,4) 
-x + c(1,2) #兩向量有倍數關係才可運算</code></pre>
-<pre><code>## [1] 2 4 4 6</code></pre>
-<pre class="r"><code>x + c(1,2,3)</code></pre>
-<pre><code>## Warning in x + c(1, 2, 3): 較長的物件長度並非較短物件長度的倍數</code></pre>
-<pre><code>## [1] 2 4 6 5</code></pre>
-<p><strong>any,all函數</strong></p>
-<pre class="r"><code>x &lt;- 10:1
-y &lt;- -4:5
-nchar(y) #每個元素的長度</code></pre>
-<pre><code>##  [1] 2 2 2 2 1 1 1 1 1 1</code></pre>
-<pre class="r"><code>any(x &lt; y) #查看至少一個比較結果是否成立</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>all(x &lt; y) #查看所有比較結果是否成立</code></pre>
-<pre><code>## [1] FALSE</code></pre>
-<p><strong>查看向量元素</strong></p>
-<p>數值或由文字組成的向量都適用。</p>
-<pre class="r"><code>x &lt;- c(1,2,3,4,5)
-x[1] #查看第一個元素</code></pre>
-<pre><code>## [1] 1</code></pre>
-<pre class="r"><code>x[1:3] #查看連續元素</code></pre>
-<pre><code>## [1] 1 2 3</code></pre>
-<pre class="r"><code>x[c(1,3)] #查看非連續元素</code></pre>
-<pre><code>## [1] 1 3</code></pre>
-<pre class="r"><code>four_seasons &lt;- c(&quot;spring&quot;, &quot;summer&quot;, &quot;autumn&quot;, &quot;winter&quot;)
-favorite_season &lt;- four_seasons[3]
-favorite_season</code></pre>
-<pre><code>## [1] &quot;autumn&quot;</code></pre>
-<p><strong>刪除向量中的變數</strong></p>
-<pre class="r"><code>x &lt;- c(1,2,3,4,5)
-x[c(-1:-3)] #刪除第一到第三個變數</code></pre>
-<pre><code>## [1] 4 5</code></pre>
-<pre class="r"><code>x[c(-1,-3)] #刪除第一和第三個變數</code></pre>
-<pre><code>## [1] 2 4 5</code></pre>
-<pre class="r"><code>four_seasons &lt;- c(&quot;spring&quot;, &quot;summer&quot;, &quot;autumn&quot;, &quot;winter&quot;)
-favorite_seasons &lt;- four_seasons[c(-2, -4)]
-favorite_seasons</code></pre>
-<pre><code>## [1] &quot;spring&quot; &quot;autumn&quot;</code></pre>
-<p><strong>向量命名</strong></p>
-<pre class="r"><code>c(one = &quot;a&quot;, two = &quot;b&quot;, three = &quot;c&quot;) </code></pre>
-<pre><code>##   one   two three 
-##   &quot;a&quot;   &quot;b&quot;   &quot;c&quot;</code></pre>
-<pre class="r"><code>e &lt;- 1:3
-names(e) &lt;- c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;) #names為命名元素
-e</code></pre>
-<pre><code>## a b c 
-## 1 2 3</code></pre>
-<p><strong>向量的屬性</strong></p>
-<p>向量只能包含一種變數型別。</p>
-<pre class="r"><code>#將整數跟數值放入同一個向量中，向量會將整數轉換成數值
-k &lt;- c(7L, 24) 
-k</code></pre>
-<pre><code>## [1]  7 24</code></pre>
-<pre class="r"><code>class(k[1])</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>#將邏輯值跟整數放入同一個向量中，向量會將邏輯值轉換成整數
-k&lt;- c(7L, FALSE)
-k</code></pre>
-<pre><code>## [1] 7 0</code></pre>
-<pre class="r"><code>class(k[2])</code></pre>
-<pre><code>## [1] &quot;integer&quot;</code></pre>
-<pre class="r"><code>#將邏輯值、整數、數值、文字放入同一個向量中，向量會全部轉換成文字
-mix &lt;- c(FALSE, 7L, 24, &quot;spring&quot;)
-mix</code></pre>
-<pre><code>## [1] &quot;FALSE&quot;  &quot;7&quot;      &quot;24&quot;     &quot;spring&quot;</code></pre>
-<pre class="r"><code>class(mix[1])</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>class(mix[2])</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>class(mix[3])</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<p><strong>用判斷運算子篩選向量</strong></p>
-<pre class="r"><code>four_seasons &lt;- c(&quot;spring&quot;, &quot;summer&quot;, &quot;autumn&quot;, &quot;winter&quot;)
-my_favorite_seasons &lt;- four_seasons == &quot;autumn&quot;
-four_seasons[my_favorite_seasons]</code></pre>
-<pre><code>## [1] &quot;autumn&quot;</code></pre>
-<pre class="r"><code># |（OR）
-my_favorite_seasons &lt;- four_seasons == &quot;spring&quot; | four_seasons == &quot;autumn&quot;
-four_seasons[my_favorite_seasons]</code></pre>
-<pre><code>## [1] &quot;spring&quot; &quot;autumn&quot;</code></pre>
-<pre class="r"><code># &amp;（AND）
-my_favorite_seasons &lt;- four_seasons == &quot;spring&quot; &amp; four_seasons != &quot;autumn&quot;
-four_seasons[my_favorite_seasons]</code></pre>
-<pre><code>## [1] &quot;spring&quot;</code></pre>
-<p><strong>向量的產生方式</strong></p>
-<pre class="r"><code>#使用c()函數建立
-c(1,2,3,4,5) </code></pre>
-<pre><code>## [1] 1 2 3 4 5</code></pre>
-<pre class="r"><code>#rep()函數生成重複變數的向量，times指定生成個數 
-rep(&quot;R&quot;, times = 10) </code></pre>
-<pre><code>##  [1] &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot; &quot;R&quot;</code></pre>
-<pre class="r"><code>#seq()函數生成等差數列，from指定數列起始值，to指定數列終止值，by指定數值間距
-seq(from = 7, to = 77, by = 7)</code></pre>
-<pre><code>##  [1]  7 14 21 28 35 42 49 56 63 70 77</code></pre>
-<pre class="r"><code>seq(from = 11 ,to = 20, by = 1) </code></pre>
-<pre><code>##  [1] 11 12 13 14 15 16 17 18 19 20</code></pre>
-<pre class="r"><code>11:20 #生成數值間距為1的數列，也可用&quot;:&quot;</code></pre>
-<pre><code>##  [1] 11 12 13 14 15 16 17 18 19 20</code></pre>
-<h2 id="7">
-</h2>
-</div>
-<div id="factor" class="section level1">
-<h1>Factor</h1>
-<p><strong>因素向量</strong></p>
-<p>因素向量（factor）是一個帶有層級（Levels）資訊的向量，可用來儲存類別型變數。使用 factor() 函數可以將向量轉換成因素向量。</p>
-<pre class="r"><code>#類別間無法比較的名目型變數，例:國家
-countries_vector &lt;- c(&quot;Taiwan&quot;,&quot;Japan&quot;,&quot;America&quot;,&quot;China&quot;,&quot;England&quot; )
-factor_countries_vector &lt;- factor(countries_vector) 
-factor_countries_vector</code></pre>
-<pre><code>## [1] Taiwan  Japan   America China   England
-## Levels: America China England Japan Taiwan</code></pre>
-<pre class="r"><code>#類別間可以比較的順序型變數，例:教育程度
-education_level_vector &lt;- c(&quot;high school&quot;,&quot;college&quot;,&quot;masters&quot;,&quot;doctorate&quot;)
-factor_education_level &lt;- factor(education_level_vector,levels = c(&quot;high school&quot;,&quot;college&quot;,&quot;masters&quot;,&quot;doctorate&quot;),order=TRUE)
-factor_education_level</code></pre>
-<pre><code>## [1] high school college     masters     doctorate  
-## Levels: high school &lt; college &lt; masters &lt; doctorate</code></pre>
-<p><strong>選取比較</strong></p>
-<pre class="r"><code>grade_vector &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;F&quot;,&quot;C&quot;,&quot;A&quot;,&quot;D&quot;,&quot;B&quot;)
-#使用factor()建立順序類別 
-factor_grade_vector &lt;- factor(grade_vector,ordered =TRUE, 
-                              levels =c(&quot;F&quot;,&quot;D&quot;,&quot;C&quot;,&quot;B&quot;,&quot;A&quot;))                           
-#選出資料，例:兩位學生
-student2 &lt;- factor_grade_vector[2]
-student6 &lt;- factor_grade_vector[6]
-#學生2的成績是否比學生6好?
-student2 &gt; student6</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<p><strong>查看函數說明文件</strong></p>
-<pre class="r"><code>?&#39;==&#39; #用?&#39;&#39;查看==的操作說明</code></pre>
-<pre><code>## starting httpd help server ... done</code></pre>
-<pre class="r"><code>apropos(&quot;mea&quot;) #用apropos查看相關函數</code></pre>
-<pre><code>##  [1] &quot;.colMeans&quot;          &quot;.rowMeans&quot;          &quot;colMeans&quot;          
-##  [4] &quot;influence.measures&quot; &quot;kmeans&quot;             &quot;mean&quot;              
-##  [7] &quot;mean&quot;               &quot;mean.Date&quot;          &quot;mean.default&quot;      
-## [10] &quot;mean.difftime&quot;      &quot;mean.POSIXct&quot;       &quot;mean.POSIXlt&quot;      
-## [13] &quot;rowMeans&quot;           &quot;weighted.mean&quot;</code></pre>
-<h2 id="8">
-</h2>
-</div>
-<div id="matrix" class="section level1">
-<h1>Matrix</h1>
-<p><strong>建立(列X行)矩陣 </strong> :先列 (Row) 後行 (Column)</p>
-<pre class="r"><code>#建立2x3矩陣，nrow為列數，ncol為行數，byrow可以指定要用什麼順序擺放原先在向量中的元素
-a &lt;- matrix(1:6, nrow = 2, byrow = TRUE)
-a</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    2    3
-## [2,]    4    5    6</code></pre>
-<pre class="r"><code>class(a)</code></pre>
-<pre><code>## [1] &quot;matrix&quot;</code></pre>
-<pre class="r"><code>#byrow的預設值為FALSE，如果沒有特別指定，就是以垂直方向擺放矩陣
-b &lt;- matrix(1:6, nrow = 2) 
-b</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    3    5
-## [2,]    2    4    6</code></pre>
-<p><strong>選取元素</strong></p>
-<pre class="r"><code>b &lt;- matrix(1:6, nrow = 2) 
-b[1,2] #選取位於第一列第二行的元素</code></pre>
-<pre><code>## [1] 3</code></pre>
-<pre class="r"><code>b[,2] #選取所有第二行的元素</code></pre>
-<pre><code>## [1] 3 4</code></pre>
-<pre class="r"><code>b[1,] #選取所有第一列的元素</code></pre>
-<pre><code>## [1] 1 3 5</code></pre>
-<p><strong>用判斷運算子篩選矩陣</strong></p>
-<pre class="r"><code># &amp; (AND)
-b &lt;- matrix(1:6, nrow = 2)
-select1 &lt;- b &lt; 5 &amp; b &gt; 2
-b[select1]</code></pre>
-<pre><code>## [1] 3 4</code></pre>
-<pre class="r"><code># | (OR)
-select2 &lt;- b &lt; 2 | b &gt; 5 
-b[select2]</code></pre>
-<pre><code>## [1] 1 6</code></pre>
-<p><strong>矩陣的屬性</strong></p>
-<p>矩陣裡的每一個元素，都必須是同樣的資料型別</p>
-<pre class="r"><code>#如果將數值與邏輯值一同放入矩陣，則邏輯值亦會被自動轉換成數值
-d &lt;- matrix(c(1, 2, TRUE, FALSE, 3, 4), nrow = 2)
-d</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    1    3
-## [2,]    2    0    4</code></pre>
-<pre class="r"><code>class(d[, 2]) </code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<p><strong>矩陣的建立與命名</strong></p>
-<pre class="r"><code>#學生成績
-exam1 &lt;- c(90, 70)
-exam2 &lt;- c(80, 75)
-exam3 &lt;- c(85, 95)
-students_grades &lt;- c(exam1,exam2, exam3) #宣告students_grades
-#建立semester_grades_matrix
-semester_grades_matrix &lt;- matrix(students_grades, byrow = T, nrow = 3) 
-semester_grades_matrix </code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]   90   70
-## [2,]   80   75
-## [3,]   85   95</code></pre>
-<pre class="r"><code>#用來命名的向量students和exams
-students &lt;- c(&quot;stu1&quot;,&quot;stu2&quot;)
-exams &lt;- c(&quot;exam1&quot;,&quot;exam2&quot;, &quot;exam3&quot;)
-#colnames()是欄命名函數
-colnames(semester_grades_matrix ) &lt;- students
-#rownames()是列命名函數
-rownames(semester_grades_matrix ) &lt;- exams
-semester_grades_matrix </code></pre>
-<pre><code>##       stu1 stu2
-## exam1   90   70
-## exam2   80   75
-## exam3   85   95</code></pre>
-<p><strong>矩陣運算</strong></p>
-<pre class="r"><code>#使用t()-transpose或aperm()函數轉置矩陣
-semester_grades_matrix_t &lt;- t(semester_grades_matrix)
-semester_grades_matrix_t</code></pre>
-<pre><code>##      exam1 exam2 exam3
-## stu1    90    80    85
-## stu2    70    75    95</code></pre>
-<pre class="r"><code>semester_grades_matrix_t1 &lt;- aperm(semester_grades_matrix)
-semester_grades_matrix_t1</code></pre>
-<pre><code>##      exam1 exam2 exam3
-## stu1    90    80    85
-## stu2    70    75    95</code></pre>
-<pre class="r"><code>#rowSums():列總和;colSums():欄總和
-average &lt;- rowSums(semester_grades_matrix_t)/3
-#rbind():列合併；cbind():欄合併
-all_grades_matrix &lt;- cbind(semester_grades_matrix_t,average)
-all_grades_matrix</code></pre>
-<pre><code>##      exam1 exam2 exam3 average
-## stu1    90    80    85      85
-## stu2    70    75    95      80</code></pre>
-<pre class="r"><code>f &lt;- matrix(1:10,nrow=5)
-g &lt;- matrix(11:20,nrow=5)
-f</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]    1    6
-## [2,]    2    7
-## [3,]    3    8
-## [4,]    4    9
-## [5,]    5   10</code></pre>
-<pre class="r"><code>g</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]   11   16
-## [2,]   12   17
-## [3,]   13   18
-## [4,]   14   19
-## [5,]   15   20</code></pre>
-<pre class="r"><code>f + g #矩陣每個對應元素相加</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]   12   22
-## [2,]   14   24
-## [3,]   16   26
-## [4,]   18   28
-## [5,]   20   30</code></pre>
-<pre class="r"><code>f - g #矩陣每個對應元素相減</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]  -10  -10
-## [2,]  -10  -10
-## [3,]  -10  -10
-## [4,]  -10  -10
-## [5,]  -10  -10</code></pre>
-<pre class="r"><code>f == g #矩陣每個對應元素是否一樣</code></pre>
-<pre><code>##       [,1]  [,2]
-## [1,] FALSE FALSE
-## [2,] FALSE FALSE
-## [3,] FALSE FALSE
-## [4,] FALSE FALSE
-## [5,] FALSE FALSE</code></pre>
-<pre class="r"><code>f * g #矩陣每個對應元素相乘(不等於矩陣相乘)</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]   11   96
-## [2,]   24  119
-## [3,]   39  144
-## [4,]   56  171
-## [5,]   75  200</code></pre>
-<pre class="r"><code>#f[5X2],g[5X2]矩陣相乘--前列乘後行，其中一個須先轉置
-f %*% t(g) #f[5X2]和t(g)[2x5]矩陣相乘，形成5x5矩陣</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4] [,5]
-## [1,]  107  114  121  128  135
-## [2,]  134  143  152  161  170
-## [3,]  161  172  183  194  205
-## [4,]  188  201  214  227  240
-## [5,]  215  230  245  260  275</code></pre>
-<p><em><a href="#0">back</a></em></p>
-<h2 id="9">
-</h2>
-</div>
-<div id="data.frame" class="section level1">
-<h1>Data.frame</h1>
-<p><strong>建立資料框</strong></p>
-<pre class="r"><code>#data.frame中，每一行都是由相同長度的vector所組成
-x &lt;- c(&quot;Lisa&quot;,&quot;Amy&quot;,&quot;Jack&quot;,&quot;Tweety&quot;,&quot;Gale&quot;,&quot;Ruby&quot;,
-        &quot;James&quot;,&quot;Ben&quot;,&quot;Angel&quot;,&quot;Cindy&quot;)
-y &lt;- 99:90
-z &lt;- 1:10
-#用data.frame()函數建立10x3資料框，並在宣告過程直接命名
-DF &lt;- data.frame(student=x,score=y,minus=z)
-DF</code></pre>
-<pre><code>##    student score minus
-## 1     Lisa    99     1
-## 2      Amy    98     2
-## 3     Jack    97     3
-## 4   Tweety    96     4
-## 5     Gale    95     5
-## 6     Ruby    94     6
-## 7    James    93     7
-## 8      Ben    92     8
-## 9    Angel    91     9
-## 10   Cindy    90    10</code></pre>
-<p><strong>data.frame中，每一列(row)代表一個觀測值，每一行(column)代表一個變數，且資料框預設會將文字的內容以因素向量儲存</strong></p>
-<pre class="r"><code>DF[1,] #選出第一個觀測值</code></pre>
-<pre><code>##   student score minus
-## 1    Lisa    99     1</code></pre>
-<pre class="r"><code>DF[,1] #選出第一個變數</code></pre>
-<pre><code>##  [1] Lisa   Amy    Jack   Tweety Gale   Ruby   James  Ben    Angel  Cindy 
-## Levels: Amy Angel Ben Cindy Gale Jack James Lisa Ruby Tweety</code></pre>
-<pre class="r"><code>#將文字內容從因素向量修正為文字
-DF &lt;- data.frame(student=x,score=y,minus=z,stringsAsFactors = FALSE)
-DF[,1] #在 data.frame() 函數指定 stringsAsFactors = FALSE</code></pre>
-<pre><code>##  [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;   &quot;Ruby&quot;   &quot;James&quot; 
-##  [8] &quot;Ben&quot;    &quot;Angel&quot;  &quot;Cindy&quot;</code></pre>
-<pre class="r"><code>DF[,1] &lt;- as.character(DF[,1])
-DF[,1] #用 as.character() 函數進行變數類型的轉換</code></pre>
-<pre><code>##  [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;   &quot;Ruby&quot;   &quot;James&quot; 
-##  [8] &quot;Ben&quot;    &quot;Angel&quot;  &quot;Cindy&quot;</code></pre>
-<p><strong>查看資料框屬性</strong></p>
-<pre class="r"><code>class(DF) #用class()函數查看data.frame的資料型別</code></pre>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<pre class="r"><code>nrow(DF) #查看列數</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code>ncol(DF) #查看行數</code></pre>
-<pre><code>## [1] 3</code></pre>
-<pre class="r"><code>dim(DF) #dim()函數列出維度資訊，可同時查看行數和列數</code></pre>
-<pre><code>## [1] 10  3</code></pre>
-<pre class="r"><code>head(DF) #查看前六列</code></pre>
-<pre><code>##   student score minus
-## 1    Lisa    99     1
-## 2     Amy    98     2
-## 3    Jack    97     3
-## 4  Tweety    96     4
-## 5    Gale    95     5
-## 6    Ruby    94     6</code></pre>
-<pre class="r"><code>tail(DF,n=3) #查看後三列</code></pre>
-<pre><code>##    student score minus
-## 8      Ben    92     8
-## 9    Angel    91     9
-## 10   Cindy    90    10</code></pre>
-<pre class="r"><code>str (DF) #用str()函數快速了解結構</code></pre>
-<pre><code>## &#39;data.frame&#39;:    10 obs. of  3 variables:
-##  $ student: chr  &quot;Lisa&quot; &quot;Amy&quot; &quot;Jack&quot; &quot;Tweety&quot; ...
-##  $ score  : int  99 98 97 96 95 94 93 92 91 90
-##  $ minus  : int  1 2 3 4 5 6 7 8 9 10</code></pre>
-<pre class="r"><code>names(DF) #用names()函數查看直行名稱</code></pre>
-<pre><code>## [1] &quot;student&quot; &quot;score&quot;   &quot;minus&quot;</code></pre>
-<pre class="r"><code>attributes(DF) #用attribute()查看直行和橫列名稱</code></pre>
-<pre><code>## $names
-## [1] &quot;student&quot; &quot;score&quot;   &quot;minus&quot;  
-## 
-## $row.names
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## $class
-## [1] &quot;data.frame&quot;</code></pre>
-<pre class="r"><code>rownames(DF) #用rownames()函數查看橫列名稱</code></pre>
-<pre><code>##  [1] &quot;1&quot;  &quot;2&quot;  &quot;3&quot;  &quot;4&quot;  &quot;5&quot;  &quot;6&quot;  &quot;7&quot;  &quot;8&quot;  &quot;9&quot;  &quot;10&quot;</code></pre>
-<pre class="r"><code>summary(DF) #顯示資料的基本資訊</code></pre>
-<pre><code>##    student              score           minus      
-##  Length:10          Min.   :90.00   Min.   : 1.00  
-##  Class :character   1st Qu.:92.25   1st Qu.: 3.25  
-##  Mode  :character   Median :94.50   Median : 5.50  
-##                     Mean   :94.50   Mean   : 5.50  
-##                     3rd Qu.:96.75   3rd Qu.: 7.75  
-##                     Max.   :99.00   Max.   :10.00</code></pre>
-<pre class="r"><code>View(DF) #直接開啟資料畫面</code></pre>
-<p><strong>查看資料內容</strong></p>
-<pre class="r"><code>DF$student #使用 $ 透過指定名稱查看某行內容</code></pre>
-<pre><code>##  [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;   &quot;Ruby&quot;   &quot;James&quot; 
-##  [8] &quot;Ben&quot;    &quot;Angel&quot;  &quot;Cindy&quot;</code></pre>
-<pre class="r"><code>#使用 [] 查看資料內容
-#查看特定或行元素(行列名稱不被顯示)
-DF[3,2] </code></pre>
-<pre><code>## [1] 97</code></pre>
-<pre class="r"><code>DF[c(3,7),1]</code></pre>
-<pre><code>## [1] &quot;Jack&quot;  &quot;James&quot;</code></pre>
-<pre class="r"><code>#指定多於一行或列元素(顯示行列名稱)
-DF[3,1:2] </code></pre>
-<pre><code>##   student score
-## 3    Jack    97</code></pre>
-<pre class="r"><code>DF[2,c(1,2)]</code></pre>
-<pre><code>##   student score
-## 2     Amy    98</code></pre>
-<pre class="r"><code>DF[2,c(&quot;student&quot;,&quot;score&quot;)]</code></pre>
-<pre><code>##   student score
-## 2     Amy    98</code></pre>
-<pre class="r"><code>DF[c(3,7),1:3]</code></pre>
-<pre><code>##   student score minus
-## 3    Jack    97     3
-## 7   James    93     7</code></pre>
-<pre class="r"><code>#資料型別因不同方法產生不同結果
-DF[,&quot;student&quot;]</code></pre>
-<pre><code>##  [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;   &quot;Ruby&quot;   &quot;James&quot; 
-##  [8] &quot;Ben&quot;    &quot;Angel&quot;  &quot;Cindy&quot;</code></pre>
-<pre class="r"><code>class(DF[,&quot;student&quot;])</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>DF[&quot;student&quot;]</code></pre>
-<pre><code>##    student
-## 1     Lisa
-## 2      Amy
-## 3     Jack
-## 4   Tweety
-## 5     Gale
-## 6     Ruby
-## 7    James
-## 8      Ben
-## 9    Angel
-## 10   Cindy</code></pre>
-<pre class="r"><code>class(DF[&quot;student&quot;])</code></pre>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<pre class="r"><code>DF[[&quot;student&quot;]]</code></pre>
-<pre><code>##  [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;   &quot;Ruby&quot;   &quot;James&quot; 
-##  [8] &quot;Ben&quot;    &quot;Angel&quot;  &quot;Cindy&quot;</code></pre>
-<pre class="r"><code>class(DF[[&quot;student&quot;]])</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>#若使用中括號且要保證所回傳的是單一行的data.frame，可加入drop=FALSE引數
-DF[,&quot;student&quot;,drop=FALSE]</code></pre>
-<pre><code>##    student
-## 1     Lisa
-## 2      Amy
-## 3     Jack
-## 4   Tweety
-## 5     Gale
-## 6     Ruby
-## 7    James
-## 8      Ben
-## 9    Angel
-## 10   Cindy</code></pre>
-<pre class="r"><code>class(DF[,&quot;student&quot;,drop=FALSE])</code></pre>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<p><strong>篩選資料</strong></p>
-<pre class="r"><code>#使用filter函數設定篩選條件
-filter &lt;- DF$score == 96
-DF[filter,] #篩選水平觀測值</code></pre>
-<pre><code>##   student score minus
-## 4  Tweety    96     4</code></pre>
-<pre class="r"><code>#使用subset函數設定篩選條件
-subset(DF,subset = score &gt; 96)</code></pre>
-<pre><code>##   student score minus
-## 1    Lisa    99     1
-## 2     Amy    98     2
-## 3    Jack    97     3</code></pre>
-<p><strong>查看資料框表示方式</strong></p>
-<pre class="r"><code>#使用model.matrix來建立指標或虛擬變數(dummy variable)，產生數個直行，每行代表factor的一個level，若某列存有該level，則顯示為1，否則為0。
-capital_city &lt;- factor(c(&quot;Tokyo&quot;,&quot;Taipei&quot;,&quot;London&quot;,&quot;Washington&quot;,&quot;Taipei&quot;,
-                    &quot;Souel&quot;,&quot;Rome&quot;,&quot;Paris&quot;,&quot;Warsaw&quot;,&quot;Taipei&quot;))
-model.matrix(~capital_city -1) # 轉換出只有虛擬變數的欄位</code></pre>
-<pre><code>##    capital_cityLondon capital_cityParis capital_cityRome capital_citySouel
-## 1                   0                 0                0                 0
-## 2                   0                 0                0                 0
-## 3                   1                 0                0                 0
-## 4                   0                 0                0                 0
-## 5                   0                 0                0                 0
-## 6                   0                 0                0                 1
-## 7                   0                 0                1                 0
-## 8                   0                 1                0                 0
-## 9                   0                 0                0                 0
-## 10                  0                 0                0                 0
-##    capital_cityTaipei capital_cityTokyo capital_cityWarsaw
-## 1                   0                 1                  0
-## 2                   1                 0                  0
-## 3                   0                 0                  0
-## 4                   0                 0                  0
-## 5                   1                 0                  0
-## 6                   0                 0                  0
-## 7                   0                 0                  0
-## 8                   0                 0                  0
-## 9                   0                 0                  1
-## 10                  1                 0                  0
-##    capital_cityWashington
-## 1                       0
-## 2                       0
-## 3                       0
-## 4                       1
-## 5                       0
-## 6                       0
-## 7                       0
-## 8                       0
-## 9                       0
-## 10                      0
-## attr(,&quot;assign&quot;)
-## [1] 1 1 1 1 1 1 1 1
-## attr(,&quot;contrasts&quot;)
-## attr(,&quot;contrasts&quot;)$capital_city
-## [1] &quot;contr.treatment&quot;</code></pre>
-<h2 id="10">
-</h2>
-</div>
-<div id="array" class="section level1">
-<h1>Array</h1>
-<p><strong>一維度的陣列是向量，二維度dim=c(x,y)的陣列是矩陣，array(陣列)是多維度的vector，其元素必須為同一種資料形式。</strong></p>
-<pre class="r"><code>#將向量放入陣列
-vector1 &lt;- c(1,2,3)
-vector2 &lt;- c(7,8,9)
-array1 &lt;- array(c(vector1,vector2),dim = c(2,3,2))
-array1</code></pre>
-<pre><code>## , , 1
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    3    8
-## [2,]    2    7    9
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    3    8
-## [2,]    2    7    9</code></pre>
-<pre class="r"><code>#將數列放入陣列
-array2 &lt;- array(1:12,dim = c(2,3,2))
-array2</code></pre>
-<pre><code>## , , 1
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    3    5
-## [2,]    2    4    6
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3]
-## [1,]    7    9   11
-## [2,]    8   10   12</code></pre>
-<pre class="r"><code>array2[1,,]</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]    1    7
-## [2,]    3    9
-## [3,]    5   11</code></pre>
-<pre class="r"><code>array2[1,,1]</code></pre>
-<pre><code>## [1] 1 3 5</code></pre>
-<pre class="r"><code>array2[,,1]</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    3    5
-## [2,]    2    4    6</code></pre>
-<h2 id="11">
-</h2>
-</div>
-<div id="list" class="section level1">
-<h1>List</h1>
-<p><strong>list(列表，清單)可以儲存任何型別或長度的資料</strong></p>
-<pre class="r"><code>#建立包含多樣性物件的矩陣
-thevector &lt;- 1:10
-thelist &lt;- list(c(1,2,3),4:8) #包含兩個元素的list
-thematrix &lt;- matrix(1:9,nrow = 3)
-thedf &lt;- DF[1:5,]
-thelist &lt;- list(vec = thevector,mat = thematrix,list = thelist,df = thedf)
-thelist</code></pre>
-<pre><code>## $vec
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## $mat
-##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9
-## 
-## $list
-## $list[[1]]
-## [1] 1 2 3
-## 
-## $list[[2]]
-## [1] 4 5 6 7 8
-## 
-## 
-## $df
-##   student score minus
-## 1    Lisa    99     1
-## 2     Amy    98     2
-## 3    Jack    97     3
-## 4  Tweety    96     4
-## 5    Gale    95     5</code></pre>
-<p><strong>從列表中選擇資料</strong></p>
-<pre class="r"><code>names(thelist)</code></pre>
-<pre><code>## [1] &quot;vec&quot;  &quot;mat&quot;  &quot;list&quot; &quot;df&quot;</code></pre>
-<pre class="r"><code>thelist[[&quot;mat&quot;]] #運用[[]]選出清單中的特定資料</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9</code></pre>
-<pre class="r"><code>#用[[]]選出特定資料後，再用[]選出該資料指定的內容
-thelist[[&quot;df&quot;]][,1] </code></pre>
-<pre><code>## [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;</code></pre>
-<pre class="r"><code>thelist[[&quot;df&quot;]]$student</code></pre>
-<pre><code>## [1] &quot;Lisa&quot;   &quot;Amy&quot;    &quot;Jack&quot;   &quot;Tweety&quot; &quot;Gale&quot;</code></pre>
-<pre class="r"><code>thelist[[&quot;df&quot;]][,1,drop = FALSE]</code></pre>
-<pre><code>##   student
-## 1    Lisa
-## 2     Amy
-## 3    Jack
-## 4  Tweety
-## 5    Gale</code></pre>
-<pre class="r"><code>thelist[[&quot;list&quot;]][2]</code></pre>
-<pre><code>## [[1]]
-## [1] 4 5 6 7 8</code></pre>
-<p><strong>附加元素</strong></p>
-<pre class="r"><code>length(thelist) #查看列表長度</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>thelist[[5]] &lt;- 2020 #附加第五個元素，不給予名稱
-thelist[[&quot;newelement&quot;]] &lt;- 11:20 #附加第六個元素，給予名稱
-names(thelist)</code></pre>
-<pre><code>## [1] &quot;vec&quot;        &quot;mat&quot;        &quot;list&quot;       &quot;df&quot;         &quot;&quot;          
-## [6] &quot;newelement&quot;</code></pre>
-<pre class="r"><code>length(thelist)</code></pre>
-<pre><code>## [1] 6</code></pre>
+<div id="functions-related-to-apply" class="section level1">
+<h1>Functions Related To apply()</h1>
+<p><strong>aggregate(x, …)</strong></p>
+<p>aggregate函數類似SQL中的group by，會先將資料分群，再將其聚合成指定的形式並進行運算。主要有三種類型:分別應用於資料框(data.frame)、公式(formula)和時間序列(ts)。</p>
+<ul>
+<li><p>data.frame : aggregate(x, by, FUN, …, simplify = TRUE, drop = TRUE)</p>
+<ul>
+<li><p>第一引數為操作物件；第二引數by為分群依據，會出現在結果最前方的欄位，須為list；第三引數為應用於操作物件的運算函數。</p></li>
+<li><p>simplify = TRUE:簡化，不轉換為list的形式；drop = TRUE:刪除計數為零的組合。</p></li>
+</ul></li>
+</ul>
+<pre class="r"><code>data(&quot;diamonds&quot;, package = &quot;ggplot2&quot;)
+head(diamonds)</code></pre>
+<pre><code>##   carat       cut color clarity depth table price    x    y    z
+## 1  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
+## 2  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
+## 3  0.23      Good     E     VS1  56.9    65   327 4.05 4.07 2.31
+## 4  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
+## 5  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
+## 6  0.24 Very Good     J    VVS2  62.8    57   336 3.94 3.96 2.48</code></pre>
+<pre class="r"><code>cut_color &lt;- aggregate(diamonds$price, by = list(cut = diamonds$cut, color = diamonds$color), FUN = mean)
+head(cut_color)</code></pre>
+<pre><code>##         cut color        x
+## 1      Fair     D 4291.061
+## 2      Good     D 3405.382
+## 3 Very Good     D 3470.467
+## 4   Premium     D 3631.293
+## 5     Ideal     D 2629.095
+## 6      Fair     E 3682.312</code></pre>
+<pre class="r"><code>xtabs(x ~ ., data = cut_color) #整理出各種cut和color對應price平均的情形，&quot;.&quot;代表所有欄位</code></pre>
+<pre><code>##            color
+## cut                D        E        F        G        H        I        J
+##   Fair      4291.061 3682.312 3827.003 4239.255 5135.683 4685.446 4975.655
+##   Good      3405.382 3423.644 3495.750 4123.482 4276.255 5078.533 4574.173
+##   Very Good 3470.467 3214.652 3778.820 3872.754 4535.390 5255.880 5103.513
+##   Premium   3631.293 3538.914 4324.890 4500.742 5216.707 5946.181 6294.592
+##   Ideal     2629.095 2597.550 3374.939 3720.706 3889.335 4451.970 4918.186</code></pre>
+<ul>
+<li><p>formula : aggregate(formula, data, FUN, …, subset, na.action = na.omit)</p>
+<ul>
+<li><p>第一引數為formula，由“~”分為左右兩側，左側的變數(一個或多個)被用來計算，右側的變數(一個或多個)為對左側變數分群的依據；第二引數為使用的資料；第三引數為要套用至formula左側變數的運算函數。</p></li>
+<li><p>subset : 可指定要觀察的子集；na.action : 決定是否移除缺失值。</p></li>
+</ul></li>
+</ul>
+<pre class="r"><code># formula:one ~ one
+aggregate(carat ~ cut, data = diamonds, max)</code></pre>
+<pre><code>##         cut carat
+## 1      Fair  5.01
+## 2      Good  3.01
+## 3 Very Good  4.00
+## 4   Premium  4.01
+## 5     Ideal  3.50</code></pre>
+<pre class="r"><code># formula:one ~ many
+clarity_color &lt;- aggregate(price ~ clarity + color, diamonds, 
+                           FUN = quantile, probs = 0.5) # &quot;FUN = quantile, probs = 0.5&quot; : FUN = median
+head(clarity_color, 3)</code></pre>
+<pre><code>##   clarity color  price
+## 1      I1     D 3774.5
+## 2     SI2     D 3468.0
+## 3     SI1     D 1759.0</code></pre>
+<pre class="r"><code>xtabs(price ~ ., data = clarity_color ) #整理出cut和color對應price中位數(第二四分位距)的情形</code></pre>
+<pre><code>##        color
+## clarity      D      E      F      G      H      I      J
+##    I1   3774.5 3296.5 2856.0 2999.5 3669.0 3054.5 4546.0
+##    SI2  3468.0 3612.0 3812.0 4027.0 4547.0 5170.5 4656.0
+##    SI1  1759.0 2257.5 2657.0 2604.0 4564.0 4368.0 4275.5
+##    VS2  1688.0 1662.0 1786.0 2770.0 4082.0 4199.0 4338.0
+##    VS1  1860.0 1668.0 2036.5 1891.5 2175.0 2847.0 3557.5
+##    VVS2 1257.0 1056.0 2041.0 1906.0  881.0 1369.0 4098.0
+##    VVS1 1427.0 1017.0 1140.5 1114.0  968.0 1080.0 1768.0
+##    IF   4632.0 1208.0 1046.0 1052.0 1074.0  895.0 1061.0</code></pre>
+<pre class="r"><code># formula:many ~ one
+aggregate(cbind(carat, depth) ~ cut, data = diamonds, min)</code></pre>
+<pre><code>##         cut carat depth
+## 1      Fair  0.22  43.0
+## 2      Good  0.23  54.3
+## 3 Very Good  0.20  56.8
+## 4   Premium  0.20  58.0
+## 5     Ideal  0.20  43.0</code></pre>
+<pre class="r"><code># formula:many ~ many
+head(aggregate(cbind(carat, depth) ~ cut + color, data = diamonds, mean))</code></pre>
+<pre><code>##         cut color     carat    depth
+## 1      Fair     D 0.9201227 64.04847
+## 2      Good     D 0.7445166 62.36571
+## 3 Very Good     D 0.6964243 61.75017
+## 4   Premium     D 0.7215471 61.16925
+## 5     Ideal     D 0.5657657 61.67837
+## 6      Fair     E 0.8566071 63.31964</code></pre>
+<ul>
+<li><p>time series : aggregate(x, nfrequency = 1, FUN = sum, ndeltat = 1, ts.eps = getOption(“ts.eps”), …)</p>
+<ul>
+<li><p>第一引數為操作物件；第二引數nfrequency設定單位時間間距；第三引數為應用於操作物件的函數。</p></li>
+<li><p>ndeltat = 1: 在連續觀察值之間的新分數，需為觀察區間的除數；ts.eps = getOption(“ts.eps”) : 決定是否以nfrequency為原始間距。</p></li>
+</ul></li>
+</ul>
+<pre class="r"><code># 計算美國總統歷年的平均支持率
+aggregate(presidents, nfrequency = 1, FUN = mean)</code></pre>
+<pre><code>## Time Series:
+## Start = 1945 
+## End = 1974 
+## Frequency = 1 
+##  [1]    NA 47.00 51.00    NA 58.50 41.75 28.75    NA 67.00 65.00 72.75
+## [12] 72.25 65.25 52.25 61.50 62.75 76.00 71.50 64.75 72.75 66.50 52.25
+## [23] 45.00 41.00 61.25 58.00 50.50    NA 44.75 25.25</code></pre>
+<pre class="r"><code># 賦予第三季度較輕的權重
+aggregate(presidents, nfrequency = 1,
+         FUN = weighted.mean, w = c(1, 1, 0.5, 1))</code></pre>
+<pre><code>## Time Series:
+## Start = 1945 
+## End = 1974 
+## Frequency = 1 
+##  [1]       NA 47.57143 50.57143       NA 58.71429 41.14286 28.28571
+##  [8]       NA 65.85714 64.14286 71.85714 73.00000 65.57143 52.85714
+## [15] 61.57143 63.00000 76.71429 72.85714 65.14286 73.28571 66.14286
+## [22] 51.71429 46.00000 41.85714 60.71429 57.57143 50.00000       NA
+## [29] 45.42857 25.42857</code></pre>
+<p><strong>sweep(x, MARGIN, STATS, FUN = “-”, check.margin = TRUE, …)</strong></p>
+<ul>
+<li><p>sweep與apply類似，第一引數為操作物件，第二引數決定對列(以1表示)或行(以2表示)運算。</p></li>
+<li><p>FUN = “-”:預設運算函數為減號，可以視需求更換運算符號。</p></li>
+<li><p>STATS:輸入對數據操作會運用到的統計量。</p></li>
+<li><p>check.margin = TRUE:決定是否需要檢查維度是否適宜，默認為TRUE。</p></li>
+</ul>
+<pre class="r"><code># find Z-scores of telephones(in thousands) 
+require(stats)
+data(&quot;WorldPhones&quot;)
+phone_data &lt;- WorldPhones[2:7,]
+phone_mean &lt;- apply(phone_data, 1, mean)
+phone_sd &lt;- apply(phone_data, 1, sd)
+# normalize the data with a nested call
+z_score &lt;- sweep(sweep(phone_data, 1, phone_mean), 1, phone_sd, FUN = &quot;/&quot;)
+round(z_score, digits = 2)</code></pre>
+<pre><code>##      N.Amer Europe  Asia S.Amer Oceania Africa Mid.Amer
+## 1956   2.02   0.68 -0.44  -0.53   -0.54  -0.58    -0.61
+## 1957   2.01   0.69 -0.43  -0.53   -0.54  -0.58    -0.61
+## 1958   2.00   0.71 -0.40  -0.55   -0.55  -0.59    -0.62
+## 1959   1.99   0.73 -0.40  -0.55   -0.55  -0.59    -0.62
+## 1960   1.98   0.74 -0.38  -0.56   -0.56  -0.60    -0.63
+## 1961   1.97   0.76 -0.37  -0.56   -0.56  -0.60    -0.63</code></pre>
+<pre class="r"><code># find proportion of telephones(in thousands)   
+phone_sum &lt;- apply(phone_data, 1, sum)
+phone_proportion &lt;- sweep(phone_data, 1, phone_sum, FUN = &quot;/&quot;)
+phone_proportion </code></pre>
+<pre><code>##         N.Amer    Europe       Asia     S.Amer    Oceania     Africa
+## 1956 0.5912289 0.2934471 0.04606699 0.02512745 0.02315091 0.01380640
+## 1957 0.5883674 0.2955428 0.04754502 0.02449978 0.02296343 0.01405442
+## 1958 0.5784170 0.2974518 0.05626737 0.02402892 0.02272823 0.01404573
+## 1959 0.5753079 0.3012636 0.05493546 0.02403827 0.02298059 0.01417457
+## 1960 0.5686678 0.3017074 0.06147679 0.02352123 0.02284065 0.01424736
+## 1961 0.5633804 0.3046789 0.06388850 0.02355681 0.02275229 0.01414961
+##         Mid.Amer
+## 1956 0.007172282
+## 1957 0.007027209
+## 1958 0.007060870
+## 1959 0.007299621
+## 1960 0.007538760
+## 1961 0.007593507</code></pre>
+<pre class="r"><code># create a new dataset from phone_proportion 
+continent &lt;- c(rep(&quot;N.Amer&quot;, 6) , rep(&quot;Europe&quot; , 6) , rep(&quot;Asia&quot;, 6), rep(&quot;S.Amer&quot;, 6) , 
+               rep(&quot;Oceania&quot;, 6), rep(&quot;Africa&quot;, 6), rep(&quot;Mid.Amer&quot;, 6))
+year &lt;- rep(1956:1961, 7)
+proportion &lt;- c(phone_proportion [,1], phone_proportion [,2],phone_proportion [,3], phone_proportion [,4],
+                phone_proportion [,5], phone_proportion [,6], phone_proportion [,7])
+data_phone &lt;- data.frame(year, continent, proportion)
+head(data_phone, 3)</code></pre>
+<pre><code>##   year continent proportion
+## 1 1956    N.Amer  0.5912289
+## 2 1957    N.Amer  0.5883674
+## 3 1958    N.Amer  0.5784170</code></pre>
+<pre class="r"><code># graph:stacked barplot
+library(ggplot2)
+ggplot(data_phone, aes( y=proportion, x=year, fill=continent)) + 
+    ggtitle(&quot;Proportion of telephones in seven continents&quot;) +
+    geom_bar( stat=&quot;identity&quot;, width=0.35) + 
+     scale_fill_brewer(palette=&quot;Paired&quot;) +  coord_flip()</code></pre>
+<p><img src="data:image/png;base64,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" width="672" /></p>
 <p><em><a href="#0">back</a></em></p>
 </div>
 

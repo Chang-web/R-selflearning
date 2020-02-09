@@ -1,0 +1,740 @@
+---
+title: "R_intermediate"
+author: "Chang"
+date: "2020/2/8"
+output: html_document
+---
+
+<h2 id = '0'></h2>
+* [Function](#1)
+
+* [Control flow](#2) 
+
+* [Loops](#3) 
+
+* [Apply functions](#4) 
+
+* [Functions Related To apply()](#5)
+
+<h2 id = '1'></h2>
+# Function
+
+**定義函數**
+```{r}
+say.hello <- function(){
+    print("Hello, World")
+}
+say.hello() #使用say.hello呼叫此函數
+```
+**函數的引數:引數可被輸入在函數後面的括號中**
+
+sprintf函數的首個引數為字串和特殊輸入字元，後面的引數會取代該特殊輸入字元。
+```{r}
+sprintf("Hello %s", "David") #取代一個特殊輸入字元
+sprintf("Hello %s, today is a %s day", "David", "sunny") #取代兩個特殊輸入字元
+#用sprintf建立字串，name引數在function()內為變數
+hello.person <- function(name){         
+    print(sprintf("Hello %s",name))  #一個引數
+}
+hello.person("David")
+#呼叫多個引數或指定其相對位置
+hello.person <- function(first, last){
+    print(sprintf("Hello %s %s",first,last))
+}
+hello.person("David","Chang")
+hello.person(last = "Chang","David") #先指定末項引數
+hello.person(f="David",l="Chang") #指輸入部分引數名稱來指定，須小心使用
+#預設引數值
+hello.person <- function(first, last="Chang"){     #預設姓氏
+    print(sprintf("Hello %s %s",first,last))
+}
+hello.person("David")
+hello.person("David","Yang") #呼叫時指定其他姓氏
+#用"..."來附加引數，R允許輸入任意數量的引數到函數中
+hello.person <- function(first, last,...){
+    print(sprintf("Hello %s %s",first,last))
+}
+hello.person("David","Chang",extra="Good morning") #附加一個引數
+hello.person("David","Chang","Good","morning") #附加兩個引數
+```
+**值的回傳**
+```{r}
+#將計算好的結果回傳給函數
+mod <- function(x){
+  print(x%%5)
+  print("Hello!")
+}
+mod(18)
+#使用return()將計算好的結果回傳給函數，同時作為該函數的結束
+mod <- function(x){
+  return(x%%5)
+  print("Hello") #mod()函數已退出，指令不被執行
+}
+mod(18)
+```
+**Do.call**
+
+do.call()的引數需要以list的方式呈現。
+```{r}
+#可用character或物件指定函數名稱
+do.call("hello.person",list("David","Chang"))
+do.call(hello.person,list("David","Chang"))
+evaluation <- function(x,func){
+  do.call(func,list(x))
+}
+evaluation(1:10,mean) #計算平均值
+evaluation(1:10,sd) #計算標準差
+```
+<h2 id = '2'></h2>
+# Control flow
+
+**邏輯判斷式**
+```{r}
+1 == 1
+1 <= 1 #大於等於
+1 != 1 #不等於
+!c(T,F) #!表示否定
+c(T,T,F) & c(F,T,F)
+c(T,T,F) && c(F,T,F) #只回傳第一組比較值
+c(T,T,F) | c(F,T,F)
+c(T,T,F) || c(F,T,F) #只回傳第一組比較值
+5 %in% c(1:10) # x %in% y :x是否在y中
+```
+**if(首條件), else if, else(末條件)**
+
+* 兩個條件
+```{r}
+num <- function(x){
+  if(x > 20){
+    print("large")
+  }else
+  {
+    print("small")
+  }
+}
+num(10)
+num(25)
+```
+* 三個條件
+```{r}
+num <- function(x){
+  if(x > 20){
+    print("large")
+  }else if(x < 10)
+  {
+    print("small")
+  }
+  else{
+    print("medium")
+  }
+}
+num(15)
+num(5)
+num(30)
+```
+* 三個以上條件
+```{r}
+score <- function(x){
+  if(x <= 100){
+    if(x < 0){
+      print("confused")
+    }else if(x >= 60){
+      print("pass")
+    }else{
+      print("fail")
+    }
+  }else{
+    print("impossible")
+  }
+}
+score(70)
+```
+
+```{r}
+time_interval <- c("early morning","morning","noon",
+                   "evening","night","midnight") 
+routine <- function(time_interval){
+  if(time_interval == "morning"){
+    print("school")
+  }else if(time_interval == "noon"){
+    print("lunch and nap")
+  }else if(time_interval == "evening"){
+    print("dinner")
+  }else if(time_interval == "night"){
+    print("do homework")
+  }else{
+    print("sleep")
+  }
+}
+routine("midnight")
+```
+**switch**
+
+switch可以簡化使用if, else if,else的繁瑣步驟，其括弧中第一個引數為檢測值， 接下來的引數為條件和所對應的結果，最後的引數只有結果，是為預設結果。
+```{r}
+routine <- function(time_interval){
+  switch(time_interval,
+         "morning" = "school",
+         "noon" = "lunch and nap",
+         "evening" = "dinner",
+         "night" = "do homework",
+         "sleep")
+}
+routine("midnight")
+#給函數的引數為數值x，之前設定的引數名稱會被忽略，只會輸出第x個引數的結果
+routine(2)
+routine(6) #若數值比引數總數大，會回傳虛無值NULL
+is.null(routine(6))
+```
+**ifelse**
+
+ifelse用法和excel中的if函數用法類似，第一個引數為檢測條件，第二個引數是當檢測結果為TURE要回傳的值，第三個引數是當檢測結果為FALSE要回傳的值。
+
+* 單一條件檢測
+```{r}
+#邏輯測試
+ifelse(1 == 1, "YES", "NO")
+#將引數向量化
+vec <- c(1, 2, 3, 4, 5, 6)
+ifelse(vec > 3, vec*2, vec) 
+#ifelse檢測NA元素的結果為NA
+vec[4] <- NA
+ifelse(vec > 3, vec*2, vec)
+```
+* 複合條件檢測
+```{r}
+a <- c(1, 0, 1, 0, 1, 0, 1)
+b <- c(1, 2, 3, 4, 3, 2, 1)
+#單符號 &、| 比較兩側的每個元素
+ifelse(a == 0 & b == 1, "T", "F")
+ifelse(a == 0 | b == 1, "T", "F")
+#雙符號 &&、|| 比較兩側的第一個元素，回傳一個結果
+ifelse(a == 0 && b == 1, "T", "F")
+ifelse(a == 0 || b == 1, "T", "F")
+#兩個以上條件，and比or優先處理
+ifelse(a > 0 | b < 3 & a == 0, "T", "F")
+```
+
+<h2 id = '3'></h2>
+# Loops
+
+**for迴圈**
+
+for後面的引數依序有 變數、in(在)、向量 三個部分。
+```{r}
+for(x in 1:10){
+  print(x)  #個別顯示結果
+}
+#比較:向量化運算會一起顯示結果
+print(1:10)
+```
+
+```{r}
+mon <- c(month.name) #建立月份名稱向量
+#建立與mon等長的月份長度向量，其值先以NA儲存
+monthlength <- rep(NA, length(mon)) 
+names(monthlength) <- mon #以mon替monthlength命名
+#對mon迭代，每次都把長度存到monthlength
+for(y in mon){
+  monthlength[y] <- nchar(y)
+}
+monthlength
+#簡化:可以將monthlenth令為空向量
+mon <- c(month.name)
+monthlength1 <- c()
+for(y in mon){
+  monthlength1[y] <- nchar(y)
+}
+#對照:直接呼叫nchar()也可
+monthlength2 <-  nchar(mon)
+names(monthlength2) <- mon
+identical(monthlength, monthlength1, monthlength2) #檢查三種方式得到的結果是否相同
+```
+**while迴圈**
+```{r}
+x <- 1
+while(x <= 10){
+  print(x)         #於不滿足條件時跳出迴圈
+  x <- x + 1       #這一行很重要
+}
+```
+**repeat迴圈:與while相似，差別在while會先檢查指令**
+
+for, while, repeat 都可以使用break、next來改變迴圈狀態。
+```{r}
+x <- 1
+repeat{
+  if(x > 10){
+    break             #break跳出迴圈
+  }else if(x == 5){
+    x <- x + 1
+    next              #next跳過此項迭代過程
+  }
+  print(x)
+  x <- x + 1
+}
+#對照:用while迴圈表示
+x <- 1
+while(x <= 10){
+  if(x == 5){
+    x <- x + 1
+    next
+  }
+  print(x)         
+  x <- x + 1
+}
+#對照:用for迴圈表示
+for(x in 1:10){
+  if(x == 5){
+    next
+  }
+  print(x)
+}
+```
+**for, while 使用時機**
+
+* 計算句中字母數:有限個迭代次數，適合用for迴圈
+```{r}
+palindromic <- "A man, a plan, a canal, panama."
+#用strsplit()裁切句子，在第二個引數""中放入裁切條件
+chs <- strsplit(palindromic,split = "")[[1]]   #用[[]]選出list的特定資料
+chs
+#建立計數迴圈
+times <- 0
+for(ch in chs){
+  if(ch == "a"){          # == :定義為"exactly equal to ..."(與 = 有些不同)
+    times = times + 1
+  }
+}
+times
+```
+* 擲銅板:不確定正反面情形，適合用while迴圈
+```{r}
+results_coin <- c() #建立一個空向量來放置每一次投擲的結果
+side <-  c(TRUE, FALSE) #TRUE為正面，FALSE為反面
+#建立投擲迴圈
+flips <- 1 
+while(sum(results_coin) < 3){                   #擲幾次，才出現第三個正面
+  #將每次flip的結果計入results向量中
+  results_coin[flips] <- sample(side, size = 1) #sample():從向量中隨機抽樣的函數，size:指定隨機抽樣的個數
+  flips <- flips + 1
+}
+results_coin  #因為是隨機抽樣，每次的結果不同
+```
+* 擲骰子:不確定點數情形，適合用while迴圈
+```{r}
+results_dice <- c()
+throws <- 1 
+while(sum(results_dice) < 20){             #擲幾次，骰子和才大於20
+  results_dice[throws] <- sample(1:6, size = 1) 
+  throws <- throws + 1
+}
+results_dice
+```
+
+*[back](#0)*
+
+<h2 id = '4'></h2>
+# Apply functions
+
+取代迴圈，增加程式執行效率。
+
+**apply(X, MARGIN, FUN, …)**
+
+apply()的第一引數為操作物件，該物件的資料型別只能是matrix，第二引數決定對列(以1表示)或行(以2表示)運算，第三個引數為運算函數。
+
+```{r}
+mat <- array(1:20, c(4, 5)) #用array建立矩陣
+mat
+rsum_mat <- apply(mat, 1, sum) #每列加總
+rsum_mat 
+is.integer(rsum_mat)
+
+#對照:使用rowSums()可得相同結果，但是資料型別不同
+rowSums(mat)  
+is.numeric(rowSums(mat))
+a <- as.integer(rowSums(mat))
+identical(rsum_mat, a) #轉換為相同的資料型別，才能用identical()檢驗
+
+#找出每一行被3整除的數字個數
+apply(mat, 2,function(x) length(x[x %% 3 == 0]))
+
+#找出每一行被3整除的數字
+b <- apply(mat, 2,function(x) x[x %% 3 == 0]) 
+b
+class(b) #回傳的結果b是一個list
+class(b[1]) #b內又含有5個list
+class(b[[3]]) #每個list裡面的項目屬性為integer
+
+#如果元素存在NA值，該元素所處列或行的運算結果為NA
+mat[3, 2] <- NA
+apply(mat, 2, mean)
+c <- apply(mat, 2, mean, na.rm = TRUE) #設定na.rm = TRUE排除NA值
+c
+round(c, digits = 1) #round()取到一位小數
+```
+
+```{r}
+data(mtcars)
+head(mtcars, 3)
+max_mtcars <- apply(mtcars, 2, max) #對每一行取最大值
+max_mtcars
+max_mtcars1 <- apply(t(mtcars), 1, max) #轉置後對每一列取最大值
+identical(max_mtcars,max_mtcars1) #兩種方式產生的結果相同
+sd_mtcars <- apply(mtcars,2,sd) #對每行取標準差
+sd_mtcars
+```
+**lapply(X, FUN, ...)**
+
+* lapply的l代表"list"，回傳的結果都會以"list"的方式呈現。
+
+* lapply()第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，函數會套用到每個元素上，因此不能決定要對行或列運算。
+```{r}
+list1 <- list(x = matrix(1:9, ncol = 3), y = 1:5, z = c(6, 7, 8, 9))
+lapply(list1, class)
+unlist(lapply(list1, class)) #unlist()讓lapply的結果以vector的方式呈現
+#sapply()會直接回傳vector
+identical(sapply(list1, class), unlist(lapply(list1, class))) 
+
+#對每個元素平方
+list2 <- lapply(list1, function(v, factor){  
+           v^factor
+         }
+         , factor = 2)
+list2
+#對照:簡化的寫法
+rf_list2 <- lapply(list1, function(u) u^2)
+identical(list2, rf_list2)
+
+#如果list中的每個元素都是matrix，可以用lapply同時擷取特定位置的元素
+lapply(list(x = matrix(1:9, ncol = 3), y = matrix(1:16, ncol = 2), z = matrix(1:16, ncol = 8)), "[",1,2 ) #擷取第一列第二行的元素
+```
+**sapply(X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)**
+
+* sapply的s代表"simple"，回傳的結果會將list"簡化"為vector，相當於unlist(lapply())。
+
+* sapply和lapply類似，第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，同樣也不能決定要對行或列運算。
+
+* sapply與lapply的差異:多了 USE.NAME 和 simplify 兩個引數。
+```{r}
+#rnorm(a, b, c):產生a個平均數為b、標準差為c的常態分佈隨機變數，因為是隨機變數，每次的結果都不同
+#range():range1為最小值，range2為最大值
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x))) 
+
+#對照:lapply()回傳的是list
+lapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)))
+
+#simplify2array()可以把lapply生成的list簡化為array
+simplify2array(lapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x))))
+
+#simplify2array()的功能與在sapply中指定 simplify = "array" 的效果相同 
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)), simplify = "array") 
+
+#若sapply()的引數 USE.NAMES = FALSE 且 simplify = FALSE，回傳的資料型別會與lapply()相同
+sapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)), USE.NAMES = FALSE, simplify = FALSE)
+```
+**vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)**
+
+* vapply和sapply類似，第一引數為操作物件，物件的資料型別可以是list或vector，第二個引數為運算函數，同樣也不能決定要對行或列運算。
+
+* vapply和sapply的差異:FUN.VALUE(length)可以預先指定資料輸出的型別，降低誤判機率，FUN.VALUE為回傳的資料性質--data format，length為回傳資料長度。
+
+  * 延續sapply的例子，vapply可以有很多種寫法
+```{r}
+vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),double(3)) 
+vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),numeric(3))
+vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),vector(mode = "double", length = 3))
+vapply(list(rnorm(5, 7, 2),rnorm(5, 7, 2)), 
+       function(x) c(range = range(x), mean = mean(x)),vector(mode = "numeric", length = 3))
+```
+  * sapply和vapply的操作 
+```{r}
+#先存取一組數列
+s1 <- sapply(3:8, seq)
+#用sapply查看它的fivenum:min, Q1, Q2, Q3, max
+sapply(s1, fivenum)
+
+#用vapply命名:FUN.VALUE功能為限制list的長相，這裡是替s1命名，0表示須為數字，換成其他常數不影響結果
+n <- vapply(s1, fivenum, c(Min. = 0, "1st Qu." = 0, Median = 0, "3rd Qu." = 0, Max. = 0))
+n
+
+#目標:想在n插入一個Mean列，和median做比較
+#雖然在vapply中，設定FUN.VALUE = matrix(1)，而且也有對列命名，輸出的結果仍是vector，那是因為FUN.VALUE = matrix(1)的設定只是告訴R這七次結果的長相，而vapply()本身就有simplify的功能[Simplification is always done in vapply.]，所以接收到7個matrix(1)後，會自動減化以vector呈現
+vapply(s1, function(x) (Mean = mean(x)), matrix(1)) 
+#至於sapply，無論其中的simplify引數如何設定，它都會覺得每個輸出都要叫做Mean
+sapply(s1, function(x) c(Mean = mean(x)))
+#修正上述結果:在matrix的引數中，nrow設定列數為1，dimnames設定列名稱，注意dimnames必須是list
+m1 <- matrix(sapply(s1, function(x) (mean = mean(x))), nrow = 1, dimnames = list(c("Mean")))
+m2 <- matrix(vapply(s1, function(x) (mean = mean(x)), numeric(1)),nrow = 1, dimnames = list(c("Mean")))
+m2  #輸出一個Mean列
+identical(m1, m2)
+
+#用rbind()將m2插入fivenum中的第四列，結果會跟summary一樣
+rbind(n[1:3, ], m2, n[4:5, ])
+
+#summary會顯示資料的min, Q1, Q2, Q3, max, mean，不須額外命名
+sapply(s1, summary) 
+```
+**mapply(FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, USE.NAMES = TRUE)**
+
+* mapply和vapply都是sapply的變形函數，m代表mulitvariate，可以同時對多個list中的每個元素套用運算函數。
+
+* mapply的第一引數為運算函數，後方引數可插入多個list，MoreArgs為參數列表，SIMPLIFY 決定是否數組化，USE.NAMES決定是否設置字串為數據名。
+```{r}
+#用paste()黏貼重複的字串，collapse決定字串間的連接方式，sep則是決定引數間的連接方式
+#本例只有一個引數，不用設定sep，也可以用paste0() : paste0(…, collapse) is equivalent to paste(…, sep = "", collapse)
+mapply(function(x, y) paste(rep(x, y) , collapse = "") , 
+       x = LETTERS[1:6], y = 6:1, SIMPLIFY = T, USE.NAMES = F ) #簡化且不設字串為數據名
+
+#mapply檢驗結果
+p <- mapply(rep ,1, 3:5)
+q <- mapply(rep, times = 3:5, 1)
+r <- mapply(rep, times = 3:5, MoreArgs = list(x = 1))
+mapply(identical, p, q, r)
+r
+
+#比較:
+p1 <- mapply(rep ,1:3, 3:5)
+q1 <- mapply(rep, times = 3:5, 1:3)
+r1 <- mapply(rep, times = 3:5, MoreArgs = list(x = 1:3))
+mapply(identical, p1, q1)
+mapply(identical, q1, r1) #This implies p1 and r1 are not identical.
+p1
+r1
+
+#names from first
+addfunc <- function(x, y){
+  seq(x) + y
+} 
+mapply(addfunc, c(a = 1, b = 2,  c = 3), c(A = 5, B = 0, C = -5)) 
+```
+**rapply(object, f, classes = "ANY", deflt = NULL, how = c("unlist", "replace", "list"), ...)**
+
+* rapply是lapply的遞迴版本，第一引數為操作物件，第二引數為運算函數。
+
+* classes:設定函數執行的資料型別，如果不確定可以輸入 "ANY"讓程式自動輸出。
+```{r}
+vec_data <- list( v1 = matrix(1:16, 4), v2 = 1:10,  v3 = c("rstudio", "rmd") ,
+                  v4 = data.frame(a = runif(10), b = LETTERS[1:10] ))
+l <- rapply(vec_data, function(x)rep(x,2), class = "ANY",how = "list", deflt = NA)
+l[[4]][2]  #觀察部分資料發現重複了兩次
+```
+* deflt(default，默認):是當操作物件為非classes指定的型別時，該物件會被deflt預先指定的值取代。
+```{r}
+rapply(vec_data, function(x){x^2}, class = c("matrix","integer"),how="list",deflt= "no result")
+```
+* how = :
+
+  * how("list"):以list輸出。how("unlist"):以vector輸出，其結果和how = c("unlist", "replace", "list")相同。
+  
+  * how("replace"):當操作物件為非classes指定的型別時，無論deflt預先指定甚麼值，都會被原來的值取代。
+```{r}
+rapply(vec_data, function(x)paste(x,"@",sep = "--", collapse = " & "),
+       class = c("character"), how = "unlist", deflt = NA)  
+rapply(vec_data, sort, class = c("numeric"), how = "replace", deflt = NA)
+```
+**tapply(X, INDEX, FUN = NULL, …, default = NA, simplify = TRUE)**
+
+* 通常第一引數是運算函數套用的項目，第二引數是要被分群的欄位，第三引數是運算函數。
+
+* default = NA:默認NA值；simplify = TRUE:簡化，不轉換為list的形式。
+```{r}
+data("Orange")
+#對樹木編號分群，對其周長取平均
+tapply(Orange$circumference, Orange$Tree, mean)  
+#對樹木編號分群，列出周長和半徑
+orange_count <- tapply(Orange$circumference, Orange$Tree, function(x) c(x, x/(2*pi)))
+orange_count[[3]]  #顯示3號樹木的結果
+#list()會分別顯示周長列表和其對應的半徑列表
+orange_count1 <- tapply(Orange$circumference, Orange$Tree, function(x) list(x, x/(2*pi)))
+orange_count1[[3]]  #顯示3號樹木的結果
+```
+**eapply(env, FUN, ..., all.names = FALSE, USE.NAMES = TRUE)**
+
+* eapply和lapply相似，輸出的資料型別都是list，eapply的e代表"environment"，第一引數必須是environment，第二引數為運算函數。
+
+* USE.NAMES決定是否對生成的list命名。
+```{r}
+# create a new environment
+ev <- new.env()
+# create a list from the initiated environment
+ev$a <- runif(5, min = 0, max = 10)
+ev$b <- matrix(1:16, 2)
+ev$c <- data.frame(1:4,5:8)
+eapply(ev, function(x) x * 2, USE.NAMES = FALSE) #將environment中的每個元素乘兩倍
+# the environment within a function
+simple_func <- function(){
+  a <- runif(5, min = 0, max = 10)
+  b <- matrix(1:16, 2)
+  c <- data.frame(1:4,5:8)
+  
+  eapply(environment(), ncol )
+}
+simple_func()
+#R環境中的前六個變量
+tail(ls())
+#查看R環境中，前六個變量占記憶體的大小
+env <- eapply(environment(), object.size)
+str(head(env)) 
+```
+* all.names決定只要將函數套用至envrionment中可見的元素，或是每個元素。 
+[All.names, an optional Boolean parameter, specifies if the function input should be applied to just the visible elements of the environment, or to all objects.]
+```{r}
+evcount <- new.env()
+evcount$.test <- 36
+evcount$other_test <- 64
+# Names that begin with a dot (hidden objects) are excluded from the function’s application. 
+eapply(evcount, sqrt)
+# To apply the function to every object in the environment, we need to set the parameter all.names = TRUE.
+eapply(evcount, sqrt, all.names = TRUE)
+```
+**rep(x, times = 1, length.out = NA, each = 1)**
+
+* each:設定操作物件各重複的次數，times:設定操作物件重複次數。
+
+* length.out(len):輸出總長度，須為非負整數。
+
+* 延伸:  rep.int(x, times)  rep_len(x, length.out)
+```{r}
+Z <- sapply(list(matrix(1:9, 3, 3), matrix(4:15, 4, 3), matrix(8:10, 3,2)),
+            "[", 1,1 ) #分別取出三個矩陣位於第一列第一行的元素
+Z
+rep(Z, times = c(3,1,2)) #依照向量設定重複
+
+#replication of len, each and times :
+#"each" is performed first:
+rep(Z, each = 2, len = 10) #依照each的規則"到len指定的長度(如果有的話)為止"
+
+#If only len and times are given, len takes priority and times is ignored.
+rep(Z, times = c(3,1,2), len =9 ) #等同於rep(z, len = 9)
+
+```
+
+```{r}
+x <- .leap.seconds[1:3]
+rep(x, 2) #對整個x重複兩遍
+
+rep(as.POSIXlt(x), rep(2,3)) #對X的每一項分別重複兩遍，等同於下面兩項:
+#rep(as.POSIXlt(x),times =  c(2,2,2))
+#rep(as.POSIXlt(x),each = 2)
+```
+**by(data, INDICES, FUN, ..., simplify = TRUE)**
+
+* by與tapply相似，都有對資料分群的功能。第一引數是操作物件，第二引數是要被分群的列位，第三引數是套用至操作物件的運算函數。
+
+* simplify = TRUE:簡化，不轉換為list的形式。
+```{r}
+data(Orange)
+by(Orange[,2:3], Orange$Tree, colMeans)
+```
+
+<h2 id = '5'></h2>
+# Functions Related To apply()
+
+**aggregate(x, ...)**
+
+aggregate函數類似SQL中的group by，會先將資料分群，再將其聚合成指定的形式並進行運算。主要有三種類型:分別應用於資料框(data.frame)、公式(formula)和時間序列(ts)。
+
+* data.frame : aggregate(x, by, FUN, ..., simplify = TRUE, drop = TRUE)
+
+  * 第一引數為操作物件；第二引數by為分群依據，會出現在結果最前方的欄位，須為list；第三引數為應用於操作物件的運算函數。
+ 
+  * simplify = TRUE:簡化，不轉換為list的形式；drop = TRUE:刪除計數為零的組合。
+```{r}
+data("diamonds", package = "ggplot2")
+head(diamonds)
+cut_color <- aggregate(diamonds$price, by = list(cut = diamonds$cut, color = diamonds$color), FUN = mean)
+head(cut_color)
+xtabs(x ~ ., data = cut_color) #整理出各種cut和color對應price平均的情形，"."代表所有欄位
+```
+* formula : aggregate(formula, data, FUN, ..., subset, na.action = na.omit)
+
+  * 第一引數為formula，由"~"分為左右兩側，左側的變數(一個或多個)被用來計算，右側的變數(一個或多個)為對左側變數分群的依據；第二引數為使用的資料；第三引數為要套用至formula左側變數的運算函數。
+ 
+  * subset : 可指定要觀察的子集；na.action : 決定是否移除缺失值。
+```{r}
+# formula:one ~ one
+aggregate(carat ~ cut, data = diamonds, max)
+
+# formula:one ~ many
+clarity_color <- aggregate(price ~ clarity + color, diamonds, 
+                           FUN = quantile, probs = 0.5) # "FUN = quantile, probs = 0.5" : FUN = median
+head(clarity_color, 3)
+xtabs(price ~ ., data = clarity_color ) #整理出cut和color對應price中位數(第二四分位距)的情形
+
+# formula:many ~ one
+aggregate(cbind(carat, depth) ~ cut, data = diamonds, min)
+
+# formula:many ~ many
+head(aggregate(cbind(carat, depth) ~ cut + color, data = diamonds, mean))
+```
+* time series : aggregate(x, nfrequency = 1, FUN = sum, ndeltat = 1, ts.eps = getOption("ts.eps"), ...)
+
+  * 第一引數為操作物件；第二引數nfrequency設定單位時間間距；第三引數為應用於操作物件的函數。
+ 
+  * ndeltat = 1: 在連續觀察值之間的新分數，需為觀察區間的除數；ts.eps = getOption("ts.eps") : 決定是否以nfrequency為原始間距。
+```{r}
+# 計算美國總統歷年的平均支持率
+aggregate(presidents, nfrequency = 1, FUN = mean)
+
+# 賦予第三季度較輕的權重
+aggregate(presidents, nfrequency = 1,
+         FUN = weighted.mean, w = c(1, 1, 0.5, 1))
+```
+**sweep(x, MARGIN, STATS, FUN = "-", check.margin = TRUE, ...)**
+
+* sweep與apply類似，第一引數為操作物件，第二引數決定對列(以1表示)或行(以2表示)運算。
+
+* FUN = "-":預設運算函數為減號，可以視需求更換運算符號。
+
+* STATS:輸入對數據操作會運用到的統計量。
+
+* check.margin = TRUE:決定是否需要檢查維度是否適宜，默認為TRUE。
+```{r}
+# find Z-scores of telephones(in thousands) 
+require(stats)
+data("WorldPhones")
+phone_data <- WorldPhones[2:7,]
+phone_mean <- apply(phone_data, 1, mean)
+phone_sd <- apply(phone_data, 1, sd)
+# normalize the data with a nested call
+z_score <- sweep(sweep(phone_data, 1, phone_mean), 1, phone_sd, FUN = "/")
+round(z_score, digits = 2)
+```
+
+```{r}
+# find proportion of telephones(in thousands)   
+phone_sum <- apply(phone_data, 1, sum)
+phone_proportion <- sweep(phone_data, 1, phone_sum, FUN = "/")
+phone_proportion 
+```
+
+```{r}
+# create a new dataset from phone_proportion 
+continent <- c(rep("N.Amer", 6) , rep("Europe" , 6) , rep("Asia", 6), rep("S.Amer", 6) , 
+               rep("Oceania", 6), rep("Africa", 6), rep("Mid.Amer", 6))
+year <- rep(1956:1961, 7)
+proportion <- c(phone_proportion [,1], phone_proportion [,2],phone_proportion [,3], phone_proportion [,4],
+                phone_proportion [,5], phone_proportion [,6], phone_proportion [,7])
+data_phone <- data.frame(year, continent, proportion)
+head(data_phone, 3)
+
+# graph:stacked barplot
+library(ggplot2)
+ggplot(data_phone, aes( y=proportion, x=year, fill=continent)) + 
+    ggtitle("Proportion of telephones in seven continents") +
+    geom_bar( stat="identity", width=0.35) + 
+     scale_fill_brewer(palette="Paired") +  coord_flip()
+```
+
+*[back](#0)*
+
+
