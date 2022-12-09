@@ -5,22 +5,13 @@
 
  * [R basic](https://github.com/Chang-web/R-selflearning/tree/master/R%20basic)
  * [R intermediate](https://github.com/Chang-web/R-selflearning/tree/master/R%20intermediate)
- * reading data
- * plyr & dplyr
- * data manipulation
- * data visualization
- * webcrawler
- * wordcloud
  
 ## Applications in Statistic
  
- * probability distribution
- * basic statistic analyses
- * linear model
+ * [Multiple Linear Regression](https://chang-web.github.io/R-selflearning/Multiple%20Linear%20Regression/report-code20221208.html)
 
 ## Reference
 
- * [PecuLab](https://www.peculab.org/category/courses/)
  * [Bourbon0212](https://github.com/Bourbon0212/NTU-CS-X)
  * [r-bloggers](https://www.r-bloggers.com/)
  * [tonykuoyj's R ebook](https://bookdown.org/tonykuoyj/eloquentr/)
