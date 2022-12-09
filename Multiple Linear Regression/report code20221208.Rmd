@@ -12,7 +12,7 @@ output:
 
 -   預期壽命的預測
 
-### 二、資料來源: 
+### 二、資料來源
 
 -  Life expectancy(WHO)|Kaggle
 
@@ -652,7 +652,7 @@ plot(France$Year, France$Hepatitis_B, pch = 16)
 
 ### 九、參考資料
 
--   [程式碼及輸出結果]()
+-   [程式碼及輸出結果](https://chang-web.github.io/R-selflearning/Multiple%20Linear%20Regression/report-code20221208.html)
 
 -   [資料來源_life expectancy](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who)
 

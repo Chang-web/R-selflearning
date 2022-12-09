@@ -8,11 +8,10 @@
  
 ## Applications in Statistic
  
- * [Multiple Linear Regression]()
+ * [Multiple Linear Regression](https://chang-web.github.io/R-selflearning/Multiple%20Linear%20Regression/report-code20221208.html)
 
 ## Reference
 
- * [PecuLab](https://www.peculab.org/category/courses/)
  * [Bourbon0212](https://github.com/Bourbon0212/NTU-CS-X)
  * [r-bloggers](https://www.r-bloggers.com/)
  * [tonykuoyj's R ebook](https://bookdown.org/tonykuoyj/eloquentr/)
