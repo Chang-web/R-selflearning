@@ -9,6 +9,7 @@
 ## Applications in Statistic
  
  * [Multiple Linear Regression](https://chang-web.github.io/R-selflearning/Multiple%20Linear%20Regression/report-code20221208.html)
+ * [Time Series Analysis]()
 
 ## Reference
 
