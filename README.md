@@ -5,18 +5,10 @@
 
  * [R basic](https://github.com/Chang-web/R-selflearning/tree/master/R%20basic)
  * [R intermediate](https://github.com/Chang-web/R-selflearning/tree/master/R%20intermediate)
- * reading data
- * plyr & dplyr
- * data manipulation
- * data visualization
- * webcrawler
- * wordcloud
  
 ## Applications in Statistic
  
- * probability distribution
- * basic statistic analyses
- * linear model
+ * [Multiple Linear Regression]()
 
 ## Reference
 
